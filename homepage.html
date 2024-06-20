@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type='text/css'>
+      body {
+        position: relative;
+      }
+
+      body::-webkit-scrollbar {
+        width: 6px;
+      }
+      
+      body::-webkit-scrollbar-track {
+        
+      }
+      
+      body::-webkit-scrollbar-thumb {
+        background-color: darkgrey;
+        outline: 1px solid slategrey;
+        border-radius: 15px;
+      }
+
+      .flex.flex-center {
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+    <title>Homepage</title>
+</head>
+<body>
+    <!-- Tailwind: -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind config (未來新增至nextJS專案): -->
+    <script type='application/javascript' async>
+       tailwind.config = {
+        theme: {
+            extend: {
+                borderWidth: {
+                    3: '3px',
+                    5: '5px',
+                    6: '6px',
+                },
+                screens: {
+                  xs: {  min: '0px' },
+                  sm: {  min: '576px' },
+                  md: {  min: '768px'},
+                  lg: {  min: '1024px' },
+                  xl: {  min: '1400px' },
+                  xxl: {  min: '1920px' },
+                },
+                backgroundImage: {
+                    'logo-lg': "url('/images/logo-lg.svg')",
+                    'logo-md': "url('/images/logo-md.svg')",
+                    'logo-sm': "url('/images/logo-sm.svg')",
+                    'curveline': "url('/images/curve-line.svg')",
+                    'icon-search': "url('/images/icons/search.svg')",
+                    'icon-bell': "url('/images/icons/bell.svg')",
+                    'icon-user': "url('/images/icons/user.svg')",
+                    'icon-menu': "url('/images/icons/hamburger-menu.svg')",
+                    'icon-lock': "url('/images/icons/lock.svg')",
+                    'icon-party-popper': "url('/images/icons/party-popper.svg')",
+                    'icon-eye': "url('/images/icons/eye.svg')",
+                    'icon-thumb-up': "url('/images/icons/thumb-up.svg')",
+                    'icon-heart': "url('/images/icons/heart.svg')",
+                    'icon-bookmark': "url('/images/icons/bookmark.svg')",
+                },
+                variants: {
+                  
+                }
+            },
+        }
+      }
+    </script>
+
+    <header class='sticky shadow-md z-10 top-0 flex flex-row flex-center w-full h-[84px] py-[20px] bg-white'>
+        <!-- wrapper: 使得「中間區塊」自適應: browser視窗大小 -->
+        <div class='flex flex-row justify-between w-[88%] h-[44px] sm:w-[83%] lg:w-[90%] xxl:max-w-[1296px]'>
+            <div class='flex flex-row justify-between items-center w-fit border border-gray-300'>
+                <img src='./images/logo-md.svg' alt='Journey Bites' class='object-center w-[160px] h-[20px] sm:w-[199px] sm:h-[24px]' priority />
+                <div class='text-[25px] font-[700] text-nowrap leading-7 hidden lg:block'>探索</div>
+                <i class='bg-icon-search size-[24px] shrink-0 hidden sm:block border border-gray-300'></i>
+            </div>
+            <div class='flex flex-row items-center h-[44px] gap-x-[32px] 2xs:gap-x-[24px]'>
+                <button href='javascript:void(0);' class='text-base text-white text-nowrap rounded-md w-[99px] h-[44px] bg-[#444FAE] hidden md:block'>開始創作</button>
+                <a href="javascript:void(0);" class='bg-icon-bell size-[24px]' title='通知'></a>
+                <a href="javascript:void(0);" class='bg-icon-user size-[24px] 2xs:ml-[12px]' title='user'></a>
+                <a href="javascript:void(0);" class='bg-icon-menu size-[24px] 2xs:ml-[12px] 2xs:block sm:hidden' title='menu'></a>
+            </div>
+        </div>
+    </header>
+
+    <main class='flex flex-col items-center w-full gap-y-[24px] min-w-[375px]'>
+      <!-- banner -->
+      <div class='relative flex flex-row justify-center w-full h-[800px] px-0 md:pl-[6.25%]'>
+        <img src='./images/banner-mobile.png' class='object-cover object-fit w-full h-full rounded-bl-none md:rounded-bl-[100px]' alt='banner' />
+        <div class='absolute flex flex-col w-fit h-fit items-center sm:items-start inset-x-auto top-[304px] bottom-[304px] sm:left-[14%]'>
+            <!-- 標題 -->
+            <div class='leading-[48px] text-[40px] md:text-[48px] font-[900] text-white tracking-[5%]'>探索無限創意的樂園</div>
+            <!-- 副標題 -->
+            <div class='leading-[36px] text-[25px] md:text-[30px] font-[500] text-white tracking-[5%] mt-[12px] sm:mt-[20px]'>和我們一起發現、分享和創造</div>
+            <button href='javascript:void(0);' class='align-center w-[96px] h-[44px] w-[104px] h-[52px] px-[20px] py-[12px] text-[16px] text-white text-nowrap mt-[28px] sm:mt-[36px] rounded-md bg-[#444FAE]'>開始創作</button>
+        </div>
+      </div>
+
+      <!-- 主內容 -->
+      <div id='content' class="flex w-full h-fit justify-center py-[80px] gap-x-[24px]">
+        <!-- wrapper -->
+        <div class='flex flex-col items-center content-start gap-y-[36px] w-fit md:flex-row md:justify-center lg:items-start gap-x-[24px] lg:px-[36px] border border-dashed border-gray-500'>
+          <!-- left -->
+          <div class='relative flex-col items-center w-[50%] px-0 sm:px-[36px] lg:px-0 gap-y-[36px]'>
+            <!-- 區塊: 熱門文章 -->
+            <div class='relative flex flex-col gap-y-[28px] items-center md:w-[856px] pb-[36px] bg-[#EEF8FA]'>
+              <!-- 上方列 (標題, 按鈕, ...) -->
+              <div class='flex flex-row justify-between w-full h-[60px] sm:h-[88px]'>
+                <div class='ml-[12px] sm:ml-0 flex flex-center w-[163px] h-[52px] sm:w-[200px] sm:h-[64px] gap-x-[4px] text-white text-[24px] leading-[32px] rounded-b-[7px] sm:rounded-tl-[7px] sm:border-r-[7px] sm:border-b-[7px] sm:border-white bg-[#59ABBD]'>
+                  <i class="size-[24px] bg-icon-party-popper"></i>
+                  <h3>熱門文章</h3>
+                </div>
+                <a class='w-fit h-[52px] mt-[8px] mr-[12px] sm:mt-[36px] sm:mr-[36px]  p-[12px_20px] text-[#444FAE] text-base font-[700] rounded-[8px] border border-[2px] border-[#444FAE]' href='javascript:void(0);' >
+                  查看更多
+                </a>
+              </div>
+
+              <!-- item(s) container -->
+              <div class='flex flex-row flex-wrap justify-center w-full gap-x-[16px] gap-y-[40px] px-[12px] lg:px-[36px] border border-dashed border-gray-500'>
+                  <!-- 各card item -->
+                  <div class='card relative flex flex-col gap-y-[8px] w-[351px] sm:w-[85%] md:w-[calc((100%-16px)/2)] lg:max-w-[384px] h-fit p-[20px] bg-white rounded-[8px] shadow-[0_2px_4px_0px_#AEAEAE40]'>
+                      <i class='lock bg-icon-lock bg-[#59ABBD] rounded-full bg-center bg-no-repeat size-[36px] absolute top-[-20px] right-[8px] border'></i>
+                      <!-- Top: -->            
+                      <a href='javascript:void(0);' class="flex flex-col gap-y-[8px] sm:flex-row sm:justify-between sm:gap-x-[12px]" title='article'>
+                        <div class='order-2 sm:order-none sm:w-[68%]'>
+                          <h4 class='sm:truncate text-[20px] font-[700]'>探索歐洲之美：浪漫之都巴黎</h4>
+                          <p class='text-[16px] font-[400]'>在遊歷歐洲時, 巴黎總是一個令人心馳神往的目的地。這座浪漫之都以其迷</p>
+                        </div>
+                        <img src='./images/tower.png' class='xs-all:order-1 w-full h-[140px] object-cover sm:w-[28%] sm:h-[100px] sm:aspect-square shrink-0 rounded-[8px]' alt='article thumbnail image'/>
+                      </a>
+
+                      <!-- Middle: author info -->
+                      <a href='javascript:void(0);' class="flex flex-row items-center w-fit gap-x-[8px]" title='author'>
+                        <img  src='./images/article-author.png' class='object-cover rounded-full size-[28px]' alt='article author'></img>
+                        <div class='h-[28px] text-base text-[#0F172A]'>Alexander Smith</div>
+                      </a>
+
+                      <!-- Bottom: status (view counts, likes, ...) -->
+                      <div class="flex flex-row gap-x-[12px] items-center text-[#94A3B8]">
+                        <div class='date text-[14px]'>2024 / 6 / 15</div>
+                        <!-- 點閱數 -->
+                        <div class='viewCount flex ml-auto w-fit gap-x-[4px]'>
+                            <div class='size-[24px] bg-icon-eye'></div>
+                            <div class='text-[14px]'>1002</div>
+                        </div>
+                        <!-- 讚數 -->
+                        <div class='likeCount flex w-fit gap-x-[4px]'>
+                            <div class='size-[24px] bg-icon-heart'></div>
+                            <div class='text-[14px]'>233</div>
+                        </div>
+                        <!-- 收藏數 -->
+                        <div class='savedCount flex w-fit gap-x-[4px]'>
+                            <div class='size-[24px] bg-icon-bookmark'></div>
+                            <div class='text-[14px]'>112</div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class='card relative w-[351px] max-w-[430px] sm:w-[85%] md:w-[calc((100%-16px)/2)] lg:max-w-[384px] h-[208px] flex flex-col gap-y-[8px] p-[20px] bg-white rounded-[8px]  shadow-[0_2px_4px_0px_#AEAEAE40]'>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- right -->
+          <aside class='flex flex-col w-[50%] gap-y-[36px]'>
+            <!-- 創作者列表 -->
+            <div class='relative flex flex-col h-fit p-[36px] rounded-[7px] border border-2 border-[#E2E8F0]'>
+              <h3 class='text-[30px] leading-[36px] font-[500]'>創作者列表</h3>
+              <div class='bg-curveline bg-auto bg-repeat-x bg-left-top w-[93px] h-[5px] mt-[12px]'></div>
+              <!-- <img src='./images/curve-line.svg' alt='curve' class='object-auto w-fit h-fit mt-[12px]' priority /> -->
+              
+              <a href='javascript:void(0);' class='absolute w-fit h-[52px] absolute top-[36px] right-[36px] text-[#444FAE] text-base font-[700] rounded-[8px] border border-[2px] border-[#444FAE] py-[12px] px-[20px]'>
+                查看更多
+              </a>
+              
+              <!-- 容器 -->
+              <div class="flex flex-col w-[344px] min-h-[100px] mt-[28px]">
+                <!-- 各item: -->
+                <div class='flex flex-row w-[344px] h-[120px] gap-[16px] py-[16px] border-b last:border-none'>
+                  <img src='./images/creator-image.png' class='object-cover object-left-center w-[40px] h-[40px] rounded-full' alt="creator image" />
+                  <div class='flex flex-col gap-y-[4px]'>
+                    <h4 class='text-[20px] font-[700] leading-[28px]'>瑪雅·弗朗西斯</h4>
+                    <p class='text-base font-[400] leading-[28px]'>瑪雅是一位對冒險充滿熱情的旅行者。她喜歡挑戰自己,探索世...</p>
+                  </div>
+                </div>
+
+                <div class='flex flex-row w-[344px] h-[120px] gap-[16px] py-[16px] border-b last:border-none'></div>
+
+                <div class='flex flex-row w-[344px] h-[120px] gap-[16px] py-[16px] border-b last:border-none'></div>
+              </div>
+            </div>
+
+            <!-- 熱門景點 -->
+            <div class='flex flex-col h-fit min-h-[292px] p-[36px] rounded-[7px] border border-2 border-[#E2E8F0]'>
+              <h3 class='text-[30px] leading-[36px] font-[500]'>熱門景點</h3>
+              <div class='bg-curveline bg-auto bg-repeat-x bg-left-top w-[56px] h-[5px] mt-[12px]'></div>
+              
+              <!-- 容器 -->
+              <div class="self-center flex flex-row flex-wrap content-start w-[360px] h-fit gap-x-[12px] gap-y-[16px] p-0 mt-[28px]">
+                <!-- 各item -->
+                <a class='flex flex-center px-[16px] py-[4px] text-[#444FAE] text-base font-[700] min-w-[64px] h-[36px] rounded-full border-2 border-[#444FAE]' href='javascript:void(0);'>日本</a>
+                <a class='flex flex-center px-[16px] py-[4px] text-[#444FAE] text-base font-[700] min-w-[64px] h-[36px] rounded-full border-2 border-[#444FAE]' href='javascript:void(0);'>京都</a>
+                <a class='flex flex-center px-[16px] py-[4px] text-[#444FAE] text-base font-[700] min-w-[64px] h-[36px] rounded-full border-2 border-[#444FAE]' href='javascript:void(0);'>夏威夷</a>
+                <a class='flex flex-center px-[16px] py-[4px] text-[#444FAE] text-base font-[700] min-w-[64px] h-[36px] rounded-full border-2 border-[#444FAE]' href='javascript:void(0);'>泰國</a>
+                <a class='flex flex-center px-[16px] py-[4px] text-[#444FAE] text-base font-[700] min-w-[64px] h-[36px] rounded-full border-2 border-[#444FAE]' href='javascript:void(0);'>長灘島</a>
+                <a class='flex flex-center px-[16px] py-[4px] text-[#444FAE] text-base font-[700] min-w-[64px] h-[36px] rounded-full border-2 border-[#444FAE]' href='javascript:void(0);'>拉斯維加斯</a>
+                <a class='flex flex-center px-[16px] py-[4px] text-[#444FAE] text-base font-[700] min-w-[64px] h-[36px] rounded-full border-2 border-[#444FAE]' href='javascript:void(0);'>冰島</a>
+                <a class='flex flex-center px-[16px] py-[4px] text-[#444FAE] text-base font-[700] min-w-[64px] h-[36px] rounded-full border-2 border-[#444FAE]' href='javascript:void(0);'>北海道</a>
+                <a class='flex flex-center px-[16px] py-[4px] text-[#444FAE] text-base font-[700] min-w-[64px] h-[36px] rounded-full border-2 border-[#444FAE]' href='javascript:void(0);'>台南</a>
+                <a class='flex flex-center px-[16px] py-[4px] text-[#444FAE] text-base font-[700] min-w-[64px] h-[36px] rounded-full border-2 border-[#444FAE]' href='javascript:void(0);'>布拉格</a>
+                <a class='flex flex-center px-[16px] py-[4px] text-[#444FAE] text-base font-[700] min-w-[64px] h-[36px] rounded-full border-2 border-[#444FAE]' href='javascript:void(0);'>比利時</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+        </div>
+    </main>
+    <footer class='flex flex-col flex-center py-[48px] min-w-[375px] w-full h-[375px] xs:h-[262px]'>
+        <img src='./images/logo-lg.svg' alt='Journey Bites' class='object-cover object-center w-[300px] h-[38px] 2xs:w-[200px] 2xs:h-[26px]' priority />
+        <!-- <img src='./images/curve-line.svg' alt='curve' class='object-cover w-[67px] h-[4px] mt-[20px]' priority /> -->
+        <div class='bg-curveline bg-cover w-[67px] h-[5px] mt-[20px]'></div>
+        <ul class='flex flex-row mt-[36px] gap-x-[16px] leadig-7 text-nowrap font-[700] 2xs:text-[16px] sm:text-[18px] lg:text-[20px]'>
+            <!-- 寬畫面: 20px, 窄畫面: 16px -->
+            <li><a href='javascript:void(0);' class=''>關於我們</a></li>|
+            <li><a href='javascript:void(0);' class=''>會員條款</a></li>|
+            <li><a href='javascript:void(0);' class=''>隱私權政策</a></li>
+        </ul>
+        <div class='text-base mt-[12px]'>
+            &copy;2024 Journey Bites
+        </div>
+    </footer>
+
+    <div id='breakpointTip' class='z-10 w-fit fixed text-blue-600 text-[18px] top-[0px] left-[10px]'>
+      <div id="breakpoint" class='text-[20px] font-[600]'></div>
+      <div id="resolution" class='absolute w-[170px] top-[50px]'></div>
+    </div>
+
+    <!-- Jquery: -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script type='application/javascript'>
+      $(document).ready(() => {
+          $('a,button').click((event) => {
+            const target = event.target;
+            const tagName = event.target.localName;            
+            if ('img' === tagName)
+              alert(tagName + ' ' + `"${target.alt}"`);
+            else if ('a' === tagName) {
+              const text = (target.innerText)? target.innerText : target.getAttribute('title')
+              alert(tagName + ' ' + `"${text}"`);
+            }
+            else if ('button' === tagName)
+              alert(tagName + ' ' + `"${target.innerText}"`);         
+          });
+      });
+    </script>
+    <script type='application/javascript'>
+      // declaration:
+      let breakpointDom;
+      let resolutionDom;
+
+      $(document).ready(() => {
+        // load HTML elements
+        breakpointDom = $('#breakpoint');
+        resolutionDom = $('#resolution');
+
+        // register event
+        $(window).on('resize', handleOnResize);
+
+        // initialize
+        handleOnResize();
+
+        function getBreakpointName(width) {          
+            // phone
+            if (width < 576)
+                return 'xs （< 576px）';
+            else if (width >= 576 && width < 768)
+                return 'sm （576px ~ 768px）';
+            // Tablet
+            else if (width >= 768 && width < 1024)
+                return 'md （(768px ~ 1024px）';
+            else if (width >= 1024 && width < 1440)
+                return 'lg （1024px ~ 1440px）';
+            // PC
+            else if (width >= 1440 && width < 1920)
+                return 'xl （1440px ~ 1920px）';
+            return 'xxl  ( ≧ 1920px）';
+        }
+
+        function handleOnResize () {
+            let breakpoint = getBreakpointName(window.innerWidth);
+            let resolutionText = `${window.innerWidth} × ${window.innerHeight} px`;
+            $(breakpointDom).text(breakpoint);
+            $(resolutionDom).text(resolutionText);
+        };
+      });
+    </script>
+</body>
+</html>

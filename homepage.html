@@ -121,8 +121,46 @@
                   查看更多
                 </a>
               </div>
+
               <div class="items-container flex flex-row flex-wrap justify-center w-full h-fit p-[28px_12px_28px] md:px-[36px] gap-x-[16px] gap-y-[8px] sm:gap-y-[40px]">
-                <div class='item relative w-full h-[356px] sm:max-w-[384px] sm:h-[208px] md:w-[calc((100%-16px)/2)] md:h-[208px] bg-white rounded-[8px] shadow-[0_2px_4px_0px_#AEAEAE40]'></div>
+                <!-- relative flex flex-col gap-y-[8px] w-[351px] sm:w-[85%] md:w-[calc((100%-16px)/2)] lg:max-w-[384px] h-fit p-[20px] bg-white rounded-[8px] shadow-[0_2px_4px_0px_#AEAEAE40] -->
+                <div class='item relative flex flex-col gap-y-[8px] w-full p-[20px] h-[356px] sm:max-w-[384px] sm:h-[208px] md:w-[calc((100%-16px)/2)] md:h-[208px] bg-white rounded-[8px] shadow-[0_2px_4px_0px_#AEAEAE40]'>
+                  <i class='lock bg-icon-lock bg-[#59ABBD] rounded-full bg-center bg-no-repeat size-[36px] absolute top-[-20px] right-[8px] border'></i>
+                  <!-- Top: -->            
+                  <a href='javascript:void(0);' class="flex flex-col gap-y-[8px] sm:flex-row sm:justify-between sm:gap-x-[12px]" title='article'>
+                    <div class='order-2 sm:order-none sm:w-[68%]'>
+                      <h4 class='sm:truncate text-[20px] font-[700]'>探索歐洲之美：浪漫之都巴黎</h4>
+                      <p class='text-[16px] font-[400]'>在遊歷歐洲時, 巴黎總是一個令人心馳神往的目的地。這座浪漫之都以其迷</p>
+                    </div>
+                    <img src='./images/tower.png' class='xs-all:order-1 w-full h-[140px] object-cover sm:w-[28%] sm:h-[100px] sm:aspect-square shrink-0 rounded-[8px]' alt='article thumbnail image'/>
+                  </a>
+
+                  <!-- Middle: author info -->
+                  <a href='javascript:void(0);' class="flex flex-row items-center w-fit gap-x-[8px]" title='author'>
+                    <img  src='./images/article-author.png' class='object-cover rounded-full size-[28px]' alt='article author'></img>
+                    <div class='h-[28px] text-base text-[#0F172A]'>Alexander Smith</div>
+                  </a>
+
+                  <!-- Bottom: status (view counts, likes, ...) -->
+                  <div class="flex flex-row gap-x-[12px] items-center text-[#94A3B8]">
+                    <div class='date text-[14px]'>2024 / 6 / 15</div>
+                    <!-- 點閱數 -->
+                    <div class='viewCount flex ml-auto w-fit gap-x-[4px]'>
+                        <div class='size-[24px] bg-icon-eye'></div>
+                        <div class='text-[14px]'>1002</div>
+                    </div>
+                    <!-- 讚數 -->
+                    <div class='likeCount flex w-fit gap-x-[4px]'>
+                        <div class='size-[24px] bg-icon-heart'></div>
+                        <div class='text-[14px]'>233</div>
+                    </div>
+                    <!-- 收藏數 -->
+                    <div class='savedCount flex w-fit gap-x-[4px]'>
+                        <div class='size-[24px] bg-icon-bookmark'></div>
+                        <div class='text-[14px]'>112</div>
+                    </div>
+                  </div>
+                </div>
                 <div class='item relative w-full h-[356px] sm:max-w-[384px] sm:h-[208px] md:w-[calc((100%-16px)/2)] md:h-[208px] bg-white rounded-[8px] shadow-[0_2px_4px_0px_#AEAEAE40]'></div>
                 <div class='item relative w-full h-[356px] sm:max-w-[384px] sm:h-[208px] md:w-[calc((100%-16px)/2)] md:h-[208px] bg-white rounded-[8px] shadow-[0_2px_4px_0px_#AEAEAE40]'></div>
                 <div class='item relative w-full h-[356px] sm:max-w-[384px] sm:h-[208px] md:w-[calc((100%-16px)/2)] md:h-[208px] bg-white rounded-[8px] shadow-[0_2px_4px_0px_#AEAEAE40]'></div>

@@ -29,7 +29,7 @@
     </style>
     <title>Homepage</title>
 </head>
-<body>
+<body class='box-border'>
     <!-- Tailwind: -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Tailwind config (未來新增至nextJS專案): -->
@@ -62,7 +62,7 @@
                     'icon-lock': "url('/images/icons/lock.svg')",
                     'icon-party-popper': "url('/images/icons/party-popper.svg')",
                     'icon-eye': "url('/images/icons/eye.svg')",
-                    'icon-thumb-up': "url('/images/icons/thumb-up.svg')",
+                    'icon-thumb-up': "url('/images/icons/thumbs-up.svg')",
                     'icon-heart': "url('/images/icons/heart.svg')",
                     'icon-bookmark': "url('/images/icons/bookmark.svg')",
                 },
@@ -104,16 +104,29 @@
         </div>
       </div>
 
+      <style type='text/css'>
+        #popular-articles {
+          background-color: #EEF8FA;
+        }
+
+        .items-container .item {
+          background-color: #fff;
+        }
+
+        #recommended-articles {
+          background-color: #EBEFFA;
+        }
+      </style>
+
       <!-- 主內容 -->
-      <div id='content' class="flex w-full h-fit justify-center py-[80px] gap-x-[24px]">
+      <div id='content' class="flex w-full h-fit justify-center py-[80px] gap-x-[24px] border">
         <!-- wrapper -->
-        <div class='flex flex-col items-center content-start gap-y-[36px] w-fit md:flex-row md:justify-center lg:items-start gap-x-[24px] lg:px-[36px] border border-dashed border-gray-500'>
+        <div id='content-wrapper' class='relative md:left-[1%] lg:left-[2.5%] flex flex-col lg:flex-row lg:justify-center gap-x-[24px] gap-y-[36px] w-full sm:w-[83%] md:w-[83%] lg:w-[88%]'>
           <!-- left -->
-          <div class='relative flex-col items-center w-[50%] px-0 sm:px-[36px] lg:px-0 gap-y-[36px]'>
-            <!-- 區塊: 熱門文章 -->
-            <div class='relative flex flex-col gap-y-[28px] items-center md:w-[856px] pb-[36px] bg-[#EEF8FA]'>
-              <!-- 上方列 (標題, 按鈕, ...) -->
-              <div class='flex flex-row justify-between w-full h-[60px] sm:h-[88px]'>
+          <div class='left flex flex-col grow max-w-[856px] h-fit gap-y-[36px]'>
+            <div id='popular-articles' class='flex flex-col bg-[#EEF8FA] h-fit'>
+              <!-- (標題, 按鈕, ...) -->
+              <div class='flex flex-row justify-between w-full h-fit sm:h-[88px]'>
                 <div class='ml-[12px] sm:ml-0 flex flex-center w-[163px] h-[52px] sm:w-[200px] sm:h-[64px] gap-x-[4px] text-white text-[24px] leading-[32px] rounded-b-[7px] sm:rounded-tl-[7px] sm:border-r-[7px] sm:border-b-[7px] sm:border-white bg-[#59ABBD]'>
                   <i class="size-[24px] bg-icon-party-popper"></i>
                   <h3>熱門文章</h3>
@@ -123,88 +136,56 @@
                 </a>
               </div>
 
-              <!-- item(s) container -->
-              <div class='flex flex-row flex-wrap justify-center w-full gap-x-[16px] gap-y-[40px] px-[12px] lg:px-[36px] border border-dashed border-gray-500'>
-                  <!-- 各card item -->
-                  <div class='card relative flex flex-col gap-y-[8px] w-[351px] sm:w-[85%] md:w-[calc((100%-16px)/2)] lg:max-w-[384px] h-fit p-[20px] bg-white rounded-[8px] shadow-[0_2px_4px_0px_#AEAEAE40]'>
-                      <i class='lock bg-icon-lock bg-[#59ABBD] rounded-full bg-center bg-no-repeat size-[36px] absolute top-[-20px] right-[8px] border'></i>
-                      <!-- Top: -->            
-                      <a href='javascript:void(0);' class="flex flex-col gap-y-[8px] sm:flex-row sm:justify-between sm:gap-x-[12px]" title='article'>
-                        <div class='order-2 sm:order-none sm:w-[68%]'>
-                          <h4 class='sm:truncate text-[20px] font-[700]'>探索歐洲之美：浪漫之都巴黎</h4>
-                          <p class='text-[16px] font-[400]'>在遊歷歐洲時, 巴黎總是一個令人心馳神往的目的地。這座浪漫之都以其迷</p>
-                        </div>
-                        <img src='./images/tower.png' class='xs-all:order-1 w-full h-[140px] object-cover sm:w-[28%] sm:h-[100px] sm:aspect-square shrink-0 rounded-[8px]' alt='article thumbnail image'/>
-                      </a>
+              <div class="items-container flex flex-row flex-wrap justify-center w-full h-fit p-[28px_12px_28px] md:px-[36px] gap-x-[16px] gap-y-[8px] sm:gap-y-[40px] border">
+                <div class='item relative w-full h-[356px] sm:max-w-[384px] sm:h-[208px] md:w-[calc((100%-16px)/2)] md:h-[208px] rounded-[8px] shadow-[0_2px_4px_0px_#AEAEAE40]'></div>
+                <div class='item relative w-full h-[356px] sm:max-w-[384px] sm:h-[208px] md:w-[calc((100%-16px)/2)] md:h-[208px] rounded-[8px] shadow-[0_2px_4px_0px_#AEAEAE40]'></div>
+                <div class='item relative w-full h-[356px] sm:max-w-[384px] sm:h-[208px] md:w-[calc((100%-16px)/2)] md:h-[208px] rounded-[8px] shadow-[0_2px_4px_0px_#AEAEAE40]'></div>
+                <div class='item relative w-full h-[356px] sm:max-w-[384px] sm:h-[208px] md:w-[calc((100%-16px)/2)] md:h-[208px] rounded-[8px] shadow-[0_2px_4px_0px_#AEAEAE40]'></div>
+              </div>
+            </div>
 
-                      <!-- Middle: author info -->
-                      <a href='javascript:void(0);' class="flex flex-row items-center w-fit gap-x-[8px]" title='author'>
-                        <img  src='./images/article-author.png' class='object-cover rounded-full size-[28px]' alt='article author'></img>
-                        <div class='h-[28px] text-base text-[#0F172A]'>Alexander Smith</div>
-                      </a>
-
-                      <!-- Bottom: status (view counts, likes, ...) -->
-                      <div class="flex flex-row gap-x-[12px] items-center text-[#94A3B8]">
-                        <div class='date text-[14px]'>2024 / 6 / 15</div>
-                        <!-- 點閱數 -->
-                        <div class='viewCount flex ml-auto w-fit gap-x-[4px]'>
-                            <div class='size-[24px] bg-icon-eye'></div>
-                            <div class='text-[14px]'>1002</div>
-                        </div>
-                        <!-- 讚數 -->
-                        <div class='likeCount flex w-fit gap-x-[4px]'>
-                            <div class='size-[24px] bg-icon-heart'></div>
-                            <div class='text-[14px]'>233</div>
-                        </div>
-                        <!-- 收藏數 -->
-                        <div class='savedCount flex w-fit gap-x-[4px]'>
-                            <div class='size-[24px] bg-icon-bookmark'></div>
-                            <div class='text-[14px]'>112</div>
-                        </div>
-                      </div>
-                  </div>
-                  <div class='card relative w-[351px] max-w-[430px] sm:w-[85%] md:w-[calc((100%-16px)/2)] lg:max-w-[384px] h-[208px] flex flex-col gap-y-[8px] p-[20px] bg-white rounded-[8px]  shadow-[0_2px_4px_0px_#AEAEAE40]'>
-                  </div>
+            <div id='recommended-articles' class='flex flex-col bg-[#EEF8FA] h-[350px]'>
+              <!-- (標題, 按鈕, ...) -->
+              <div class='flex flex-row justify-between w-full h-fit sm:h-[88px]'>
+                <div class='ml-[12px] sm:ml-0 flex flex-center w-[163px] h-[52px] sm:w-[200px] sm:h-[64px] gap-x-[4px] text-white text-[24px] leading-[32px] rounded-b-[7px] sm:rounded-tl-[7px] sm:border-r-[7px] sm:border-b-[7px] sm:border-white bg-[#444FAE]'>
+                  <i class="size-[24px] bg-icon-thumb-up"></i>
+                  <h3>推薦文章</h3>
+                </div>
               </div>
             </div>
           </div>
 
           <!-- right -->
-          <aside class='flex flex-col w-[50%] gap-y-[36px]'>
+          <aside class='right flex flex-col w-full gap-y-[36px] lg:w-[30%] xl:w-[30%]'>
             <!-- 創作者列表 -->
-            <div class='relative flex flex-col h-fit p-[36px] rounded-[7px] border border-2 border-[#E2E8F0]'>
-              <h3 class='text-[30px] leading-[36px] font-[500]'>創作者列表</h3>
-              <div class='bg-curveline bg-auto bg-repeat-x bg-left-top w-[93px] h-[5px] mt-[12px]'></div>
-              <!-- <img src='./images/curve-line.svg' alt='curve' class='object-auto w-fit h-fit mt-[12px]' priority /> -->
-              
+            <div id='creator-list' class='relative flex flex-col h-fit p-[36px] rounded-[7px] border border-2 border-[#E2E8F0]'>
+              <h3 class='w-full h-[88px] text-[30px] leading-[36px] font-[500]'>創作者列表</h3>
+              <!-- <div class='bg-curveline bg-auto bg-repeat-x bg-left-top w-[93px] h-[5px] mt-[12px]'></div> -->
               <a href='javascript:void(0);' class='absolute w-fit h-[52px] absolute top-[36px] right-[36px] text-[#444FAE] text-base font-[700] rounded-[8px] border border-[2px] border-[#444FAE] py-[12px] px-[20px]'>
                 查看更多
-              </a>
-              
-              <!-- 容器 -->
-              <div class="flex flex-col w-[344px] min-h-[100px] mt-[28px]">
-                <!-- 各item: -->
-                <div class='flex flex-row w-[344px] h-[120px] gap-[16px] py-[16px] border-b last:border-none'>
-                  <img src='./images/creator-image.png' class='object-cover object-left-center w-[40px] h-[40px] rounded-full' alt="creator image" />
-                  <div class='flex flex-col gap-y-[4px]'>
-                    <h4 class='text-[20px] font-[700] leading-[28px]'>瑪雅·弗朗西斯</h4>
-                    <p class='text-base font-[400] leading-[28px]'>瑪雅是一位對冒險充滿熱情的旅行者。她喜歡挑戰自己,探索世...</p>
-                  </div>
-                </div>
+              </a>              
+              <div class='items-container w-full h-full'>
+                   <!-- 各item: -->
+                  <a href='javascript:void(0);' class='item flex flex-row gap-[16px] py-[16px] border-b last:border-none' title='creator'>
+                    <img src='./images/creator-image.png' class='object-cover object-left-center w-[40px] h-[40px] rounded-full' alt="creator image" />
+                    <div class='flex flex-col gap-y-[4px]'>
+                      <h4 class='text-[20px] font-[700] leading-[28px]'>瑪雅·弗朗西斯</h4>
+                      <p class='text-base font-[400] leading-[28px]'>瑪雅是一位對冒險充滿熱情的旅行者。她喜歡挑戰自己,探索世...</p>
+                    </div>
+                  </a>
 
-                <div class='flex flex-row w-[344px] h-[120px] gap-[16px] py-[16px] border-b last:border-none'></div>
+                  <a href='javascript:void(0);' class='flex flex-row w-[289px] h-[89px] gap-[16px] py-[16px] border-b last:border-none' title='creator'></a>
 
-                <div class='flex flex-row w-[344px] h-[120px] gap-[16px] py-[16px] border-b last:border-none'></div>
+                  <a href='javascript:void(0);' class='flex flex-row w-[289px] h-[89px] gap-[16px] py-[16px] border-b last:border-none' title='creator'></a>
               </div>
             </div>
-
+            
             <!-- 熱門景點 -->
-            <div class='flex flex-col h-fit min-h-[292px] p-[36px] rounded-[7px] border border-2 border-[#E2E8F0]'>
+            <div class='flex flex-col h-fit p-[36px] rounded-[7px] border border-2 border-[#E2E8F0]'>
               <h3 class='text-[30px] leading-[36px] font-[500]'>熱門景點</h3>
               <div class='bg-curveline bg-auto bg-repeat-x bg-left-top w-[56px] h-[5px] mt-[12px]'></div>
-              
               <!-- 容器 -->
-              <div class="self-center flex flex-row flex-wrap content-start w-[360px] h-fit gap-x-[12px] gap-y-[16px] p-0 mt-[28px]">
+              <div class="items-container flex flex-row flex-wrap self-center  h-fit gap-x-[12px] gap-y-[16px] p-0 mt-[28px]">
                 <!-- 各item -->
                 <a class='flex flex-center px-[16px] py-[4px] text-[#444FAE] text-base font-[700] min-w-[64px] h-[36px] rounded-full border-2 border-[#444FAE]' href='javascript:void(0);'>日本</a>
                 <a class='flex flex-center px-[16px] py-[4px] text-[#444FAE] text-base font-[700] min-w-[64px] h-[36px] rounded-full border-2 border-[#444FAE]' href='javascript:void(0);'>京都</a>

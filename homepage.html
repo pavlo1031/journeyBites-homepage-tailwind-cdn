@@ -86,7 +86,7 @@
                 <button href='javascript:void(0);' class='text-base text-white text-nowrap rounded-md w-[99px] h-[44px] bg-[#444FAE] hidden md:block'>開始創作</button>
                 <a href="javascript:void(0);" class='bg-icon-bell size-[24px]' title='通知'></a>
                 <a href="javascript:void(0);" class='bg-icon-user size-[24px] 2xs:ml-[12px]' title='user'></a>
-                <a href="javascript:void(0);" class='bg-icon-menu size-[24px] 2xs:ml-[12px] 2xs:block sm:hidden' title='menu'></a>
+                <a id='btn-openMenu' href="javascript:void(0);" class='bg-icon-menu size-[24px] 2xs:ml-[12px] 2xs:block sm:hidden' title='menu'></a>
             </div>
         </div>
     </header>
@@ -228,9 +228,9 @@
         </div>
     </main>
 
-    <div id='menu' class='z-10 p-[8px_12px_28px] flex flex-col fixed top-0 bottom-0 right-0 w-full sm:w-[320px] bg-[#EBEFFA] border-l border-gray-300'>
+    <div id='hamburger-menu' class='z-10 p-[8px_12px_28px] flex flex-col fixed top-0 bottom-0 right-0 w-full sm:w-[320px] bg-[#EBEFFA] border-l border-gray-300'>
       <div class='flex flex-row items-center h-[44px]'>
-        <button class='ml-auto text-[20px]'>×</button>
+        <button id='btn-closeMenu' class='ml-auto text-[20px]'>×</button>
       </div>
       <div class='flex flex-col justify-start w-full h-fit'>
         <div id='menu-searchbar' class='flex flex-row items-center gap-x-[12px] p-[10px_12px] h-[44px] my-[8px] bg-white rounded-[8px] border border-[#E2E8F0]'>
@@ -298,6 +298,22 @@
             else if ('button' === tagName)
               alert(tagName + ' ' + `"${target.innerText}"`);         
           });
+      });
+    </script>
+
+    <!-- hamburger menu -->
+    <script type='application/javascript'>
+      let menu, btnCloseMenu, btnOpenMenu;
+      $(document).ready(() => {
+        menu = $('#hamburger-menu');
+        btnCloseMenu = $('#btn-closeMenu');
+        btnOpenMenu = $('#btn-openMenu');
+        $(btnOpenMenu).click(() => {
+          $(menu).removeClass('hidden');
+        });
+        $(btnCloseMenu).click(() => {
+          $(menu).addClass('hidden');
+        });
       });
     </script>
     <script type='application/javascript'>

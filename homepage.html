@@ -109,8 +109,9 @@
         <!-- wrapper -->
         <div id='content-wrapper' class='relative md:left-[1%] lg:left-[2.5%] flex flex-col md:items-center lg:flex-row lg:justify-center lg:items-start gap-x-[24px] gap-y-[36px] w-full sm:w-[83%] md:w-[83%] lg:w-[88%]'>
           <!-- left -->
-          <div class='left flex flex-col w-full max-w-[856px] h-fit gap-y-[36px]'>
-            <div id='popular-articles' class='flex flex-col bg-[#EEF8FA] h-fit'>
+          <div class='left flex flex-col grow w-full lg:w-[unset] max-w-[856px] h-full gap-y-[36px]'>
+            <!-- 熱門文章 -->
+            <div id='popular-articles' class='flex flex-col w-full h-fit bg-[#EEF8FA] '>
               <!-- (標題, 按鈕, ...) -->
               <div class='flex flex-row justify-between w-full h-fit sm:h-[88px]'>
                 <div class='ml-[12px] sm:ml-0 flex flex-center w-[163px] h-[52px] sm:w-[200px] sm:h-[64px] gap-x-[4px] text-white text-[24px] leading-[32px] rounded-b-[7px] sm:rounded-tl-[7px] sm:border-r-[7px] sm:border-b-[7px] sm:border-white bg-[#59ABBD]'>
@@ -179,9 +180,9 @@
           </div>
 
           <!-- right -->
-          <aside class='right flex flex-col w-full gap-y-[36px] lg:w-[360px] xl:w-[30%]'>
+          <aside class='right flex flex-col gap-y-[36px] w-[350px]'>
             <!-- 創作者列表 -->
-            <div id='creator-list' class='relative flex flex-col h-fit p-[36px] rounded-[7px] border-2 border-[#E2E8F0]'>
+            <div id='creator-list' class='relative flex flex-col w-full h-fit p-[36px] rounded-[7px] border-2 border-[#E2E8F0]'>
               
               <div class="flex flex-row flex-wrap w-full h-[88px] justify-between">
                 <h3 class='text-[30px] leading-[36px] font-[500]'>創作者列表</h3>
@@ -208,7 +209,7 @@
             </div>
             
             <!-- 熱門景點 -->
-            <div class='flex flex-col h-fit p-[36px] rounded-[7px] border border-2 border-[#E2E8F0]'>
+            <div class='flex flex-col w-full h-fit p-[36px] rounded-[7px] border border-2 border-[#E2E8F0]'>
               <h3 class='text-[30px] leading-[36px] font-[500]'>熱門景點</h3>
               <div class='bg-curveline bg-auto bg-repeat-x bg-left-top w-[56px] h-[5px] mt-[12px]'></div>
               <!-- 容器 -->

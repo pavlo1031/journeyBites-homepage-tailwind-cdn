@@ -111,9 +111,9 @@
       <!-- 主內容 -->
       <div id='content' class="flex w-full h-fit justify-center py-[80px] gap-x-[24px]">
         <!-- wrapper -->
-        <div id='content-wrapper' class='relative md:left-[1%] lg:left-[2.5%] flex flex-col md:items-center lg:flex-row lg:justify-center lg:items-start gap-x-[24px] gap-y-[36px] w-full sm:w-[83%] md:w-[83%] lg:w-[88%]'>
+        <div id='content-wrapper' class='relative md:left-[2%] lg:left-[2.5%] xl:left-[2%] flex flex-col md:items-center lg:flex-row lg:justify-center lg:items-start gap-x-[24px] gap-y-[36px] w-full sm:w-[83%] md:w-[85%] lg:w-[88%]'>
           <!-- left -->
-          <div class='left flex flex-col grow w-full lg:w-[unset] max-w-[856px] h-full gap-y-[36px]'>
+          <div class='left flex flex-col grow w-full items-center sm:max-w-[480px] md:max-w-[unset] md-1:max-w-[535px] md-2:max-w-[unset] lg:w-[unset] lg-1:max-w-[535px] lg-2:max-w-[856px] h-full gap-y-[36px]'>
             <!-- 熱門文章 -->
             <div id='popular-articles' class='flex flex-col w-full h-fit bg-[#EEF8FA] '>
               <!-- (標題, 按鈕, ...) -->
@@ -127,8 +127,10 @@
                 </a>
               </div>
 
-              <div class="items-container flex flex-row flex-wrap justify-center w-full h-fit p-[28px_12px_28px] md:px-[36px] gap-x-[16px] gap-y-[8px] sm:gap-y-[40px]">
-                <div class='item relative flex flex-col gap-y-[8px] w-full p-[20px] h-[356px] sm:max-w-[384px] sm:h-[208px] md:w-[calc((100%-16px)/2)] md:h-[208px] bg-white rounded-[8px] shadow-[0_2px_4px_0px_#AEAEAE40]'>
+              <!-- 容器 -->
+              <div class="items-container flex flex-col items-center md-1:flex-col md-1:items-center md-2:flex-row lg-1:flex-col lg-1:items-center lg-2:flex-row flex-wrap justify-center w-full h-fit p-[28px_12px_28px] md:px-[36px] gap-x-[16px] gap-y-[8px] sm:gap-y-[40px]">
+                <!-- item -->
+                <div class='item relative flex flex-col gap-y-[8px] p-[20px] w-full min-h-[208px] sm:max-w-[384px] md-2:w-[calc((100%-16px)/2)] lg-1:w-[384] lg-2:w-[calc((100%-16px)/2)] bg-white rounded-[8px] shadow-[0_2px_4px_0px_#AEAEAE40]'>
                   <i class='lock bg-icon-lock bg-[#59ABBD] rounded-full bg-center bg-no-repeat size-[36px] absolute top-[-20px] right-[8px] border'></i>
                   <!-- Top: -->            
                   <a href='javascript:void(0);' class="flex flex-col gap-y-[8px] sm:flex-row sm:justify-between sm:gap-x-[12px]" title='article'>
@@ -165,9 +167,9 @@
                     </div>
                   </div>
                 </div>
-                <div class='item relative w-full h-[356px] sm:max-w-[384px] sm:h-[208px] md:w-[calc((100%-16px)/2)] md:h-[208px] bg-white rounded-[8px] shadow-[0_2px_4px_0px_#AEAEAE40]'></div>
-                <div class='item relative w-full h-[356px] sm:max-w-[384px] sm:h-[208px] md:w-[calc((100%-16px)/2)] md:h-[208px] bg-white rounded-[8px] shadow-[0_2px_4px_0px_#AEAEAE40]'></div>
-                <div class='item relative w-full h-[356px] sm:max-w-[384px] sm:h-[208px] md:w-[calc((100%-16px)/2)] md:h-[208px] bg-white rounded-[8px] shadow-[0_2px_4px_0px_#AEAEAE40]'></div>
+                <div class='item relative flex flex-col gap-y-[8px] p-[20px] w-full min-h-[208px] sm:max-w-[384px] md-2:w-[calc((100%-16px)/2)] lg-1:w-[384] lg-2:w-[calc((100%-16px)/2)] bg-white rounded-[8px] shadow-[0_2px_4px_0px_#AEAEAE40]'></div>
+                <div class='item relative flex flex-col gap-y-[8px] p-[20px] w-full min-h-[208px] sm:max-w-[384px] md-2:w-[calc((100%-16px)/2)] lg-1:w-[384] lg-2:w-[calc((100%-16px)/2)] bg-white rounded-[8px] shadow-[0_2px_4px_0px_#AEAEAE40]'></div>
+                <div class='item relative flex flex-col gap-y-[8px] p-[20px] w-full min-h-[208px] sm:max-w-[384px] md-2:w-[calc((100%-16px)/2)] lg-1:w-[384] lg-2:w-[calc((100%-16px)/2)] bg-white rounded-[8px] shadow-[0_2px_4px_0px_#AEAEAE40]'></div>
               </div>
             </div>
 

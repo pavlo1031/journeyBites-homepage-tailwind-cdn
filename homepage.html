@@ -29,7 +29,7 @@
     </style>
     <title>Homepage</title>
 </head>
-<body class='box-border'>
+<body class='box-border relative'>
     <!-- Tailwind: -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Tailwind config (未來新增至nextJS專案): -->
@@ -90,7 +90,7 @@
                 <button href='javascript:void(0);' class='text-base text-white text-nowrap rounded-md w-[99px] h-[44px] bg-[#444FAE] hidden md:block'>開始創作</button>
                 <a href="javascript:void(0);" class='bg-icon-bell size-[24px]' title='通知'></a>
                 <a href="javascript:void(0);" class='bg-icon-user size-[24px] 2xs:ml-[12px]' title='user'></a>
-                <a href="javascript:void(0);" class='bg-icon-menu size-[24px] 2xs:ml-[12px] 2xs:block sm:hidden' title='menu'></a>
+                <a id='btn-openMenu' href="javascript:void(0);" class='bg-icon-menu size-[24px] 2xs:ml-[12px] 2xs:block sm:hidden' title='menu'></a>
             </div>
         </div>
     </header>
@@ -238,6 +238,41 @@
         </div>
         </div>
     </main>
+
+    <div id='hamburger-menu' class='z-10 hidden p-[8px_12px_28px] flex flex-col fixed top-0 bottom-0 right-0 w-full sm:w-[320px] bg-[#EBEFFA] border-l border-gray-300'>
+      <div class='flex flex-row items-center h-[44px]'>
+        <button id='btn-closeMenu' class='ml-auto text-[20px]'>×</button>
+      </div>
+      <div class='flex flex-col justify-start w-full h-fit'>
+        <div id='menu-searchbar' class='flex flex-row items-center gap-x-[12px] p-[10px_12px] h-[44px] my-[8px] bg-white rounded-[8px] border border-[#E2E8F0]'>
+          <i class='bg-icon-search text-[#444FAE] size-[24px] shrink-0'></i>
+          <input contenteditable class='focus:outline-0 w-full ' placeholder='Search'></input>
+        </div>
+        <div class='p-[8px] gap-y-[4px]'>
+          <div class='h-[28px] font-[700] text-[#444FAE]'>探索</div>
+          <ul class='w-full h-fit font-[400]'>
+            <li class='h-[44px] active:bg-[#444FAE] active:text-white active:rounded-[8px] p-[8px]'><a href='javascript:void(0);' class='w-full block'>熱門文章</a></li>
+            <li class='h-[44px] active:bg-[#444FAE] active:text-white active:rounded-[8px] p-[8px]'><a href='javascript:void(0);' class='w-full block'>最新文章</a></li>
+            <li class='h-[44px] active:bg-[#444FAE] active:text-white active:rounded-[8px] p-[8px]'><a href='javascript:void(0);' class='w-full block'>所有分類</a></li>
+            <li class='h-[44px] active:bg-[#444FAE] active:text-white active:rounded-[8px] p-[8px]'><a href='javascript:void(0);' class='w-full block'>台灣旅遊地圖</a></li>
+            <li class='h-[44px] active:bg-[#444FAE] active:text-white active:rounded-[8px] p-[8px]'><a href='javascript:void(0);' class='w-full block'>步道旅行</a></li>
+            <li class='h-[44px] active:bg-[#444FAE] active:text-white active:rounded-[8px] p-[8px]'><a href='javascript:void(0);' class='w-full block'>健行日記</a></li>
+            <li class='h-[44px] active:bg-[#444FAE] active:text-white active:rounded-[8px] p-[8px]'><a href='javascript:void(0);' class='w-full block'>創作者列表</a></li>
+            <li class='h-[44px] active:bg-[#444FAE] active:text-white active:rounded-[8px] p-[8px]'><a href='javascript:void(0);' class='w-full block'>旅遊食記</a></li>
+            <li class='h-[44px] active:bg-[#444FAE] active:text-white active:rounded-[8px] p-[8px]'><a href='javascript:void(0);' class='w-full block'>台灣百岳</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div id='menu-buttons-guest' class='mt-auto flex flex-row gap-x-[24px] w-full h-fit'>
+        <button class='w-[calc((100%-24px)/2)] h-[44px] rounded-[6px] font-[700] text-[#444FAE] border border-2 border-[#444FAE]'>登入</button>
+        <button class='w-[calc((100%-24px)/2)] h-[44px] rounded-[6px] font-[700] text-[#EBEFFA] bg-[#444FAE] border border-2 border-[#444FAE]'>註冊</button>
+      </div>
+      <div id='menu-buttons-login' class='flex flex-row gap-x-[24px] w-full h-fit'>
+        <button class='w-full h-[44px] rounded-[6px] font-[700] text-[#EBEFFA] bg-[#444FAE] border border-2 border-[#444FAE]'>開始</button>
+      </div>
+    </div>
+
     <footer class='flex flex-col flex-center py-[48px] min-w-[375px] w-full h-[375px] xs:h-[262px]'>
         <img src='./images/logo-lg.svg' alt='Journey Bites' class='object-cover object-center w-[300px] h-[38px] 2xs:w-[200px] 2xs:h-[26px]' priority />
         <!-- <img src='./images/curve-line.svg' alt='curve' class='object-cover w-[67px] h-[4px] mt-[20px]' priority /> -->
@@ -276,6 +311,22 @@
               //alert(tagName + ' ' + `"${target.innerText}"`);      
             }
           });
+      });
+    </script>
+
+    <!-- hamburger menu -->
+    <script type='application/javascript'>
+      let menu, btnCloseMenu, btnOpenMenu;
+      $(document).ready(() => {
+        menu = $('#hamburger-menu');
+        btnCloseMenu = $('#btn-closeMenu');
+        btnOpenMenu = $('#btn-openMenu');
+        $(btnOpenMenu).click(() => {
+          $(menu).removeClass('hidden');
+        });
+        $(btnCloseMenu).click(() => {
+          $(menu).addClass('hidden');
+        });
       });
     </script>
     <script type='application/javascript'>

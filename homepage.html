@@ -265,14 +265,16 @@
           $('a,button').click((event) => {
             const target = event.target;
             const tagName = event.target.localName;            
-            if ('img' === tagName)
-              alert(tagName + ' ' + `"${target.alt}"`);
+            if ('img' === tagName) {
+              //alert(tagName + ' ' + `"${target.alt}"`);
+            }
             else if ('a' === tagName) {
               const text = (target.innerText)? target.innerText : target.getAttribute('title')
-              alert(tagName + ' ' + `"${text}"`);
+              //alert(tagName + ' ' + `"${text}"`);
             }
-            else if ('button' === tagName)
-              alert(tagName + ' ' + `"${target.innerText}"`);         
+            else if ('button' === tagName) {
+              //alert(tagName + ' ' + `"${target.innerText}"`);      
+            }
           });
       });
     </script>

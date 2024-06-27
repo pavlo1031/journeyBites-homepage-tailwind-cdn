@@ -10,9 +10,9 @@ function Header(props) {
             </div>
             <div className='flex flex-row items-center h-[44px] gap-x-[32px] 2xs:gap-x-[24px]'>
                 <button className='text-base text-white text-nowrap rounded-md w-[99px] h-[44px] bg-[#444FAE] hidden md:block'>開始創作</button>
-                <Link href='javascript:void(0);' className='bg-icon-bell size-[24px]' title='通知' />
-                <Link href='javascript:void(0);' className='bg-icon-user size-[24px] 2xs:ml-[12px]' title='user' />
-                <Link id='btn-openMenu' href='javascript:void(0);' className='bg-icon-menu size-[24px] 2xs:ml-[12px] 2xs:block sm:hidden' title='menu' />
+                <Link href='#' className='bg-icon-bell size-[24px]' title='通知' />
+                <Link href='#' className='bg-icon-user size-[24px] 2xs:ml-[12px]' title='user' />
+                <Link id='btn-openMenu' href='#' className='bg-icon-menu size-[24px] 2xs:ml-[12px] 2xs:block sm:hidden' title='menu' />
             </div>
         </div>
     </header>);

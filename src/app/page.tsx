@@ -99,7 +99,7 @@ export default function Home() {
               <div className="flex flex-row flex-wrap w-full h-[88px] justify-between">
                 <h3 className='text-[30px] leading-[36px] font-[500]'>創作者列表</h3>
                 {/* <!-- <div className='bg-curveline bg-auto bg-repeat-x bg-left-top w-[93px] h-[5px] mt-[12px]'></div> --> */}
-                <a href='javascript:void(0);' className='h-[52px] text-[#444FAE] text-base font-[700] rounded-[8px] border border-[2px] border-[#444FAE] py-[12px] px-[20px]'>
+                <a href='#' className='h-[52px] text-[#444FAE] text-base font-[700] rounded-[8px] border border-[2px] border-[#444FAE] py-[12px] px-[20px]'>
                   查看更多
                 </a>
               </div>
@@ -107,7 +107,7 @@ export default function Home() {
               {/* <!-- item容器: --> */}
               <div className='items-container w-full h-full'>
                    {/* <!-- 各item: --> */}
-                  <a href='javascript:void(0);' className='item flex flex-row w-full gap-[16px] py-[16px] border-b last:border-none' title='creator'>
+                  <a href='#' className='item flex flex-row w-full gap-[16px] py-[16px] border-b last:border-none' title='creator'>
                     <img src='creator-image.png' className='object-cover object-left-center w-[40px] h-[40px] rounded-full' alt="creator image" />
                     <div className='flex flex-col gap-y-[4px]'>
                       <h4 className='text-[20px] font-[700] leading-[28px]'>瑪雅·弗朗西斯</h4>
@@ -115,9 +115,9 @@ export default function Home() {
                     </div>
                   </a>
 
-                  <a href='javascript:void(0);' className='flex flex-row w-full h-[92px] gap-[16px] py-[16px] border-b last:border-none' title='creator'></a>
+                  <a href='#' className='flex flex-row w-full h-[92px] gap-[16px] py-[16px] border-b last:border-none' title='creator'></a>
 
-                  <a href='javascript:void(0);' className='flex flex-row w-full h-[92px] gap-[16px] py-[16px] border-b last:border-none' title='creator'></a>
+                  <a href='#' className='flex flex-row w-full h-[92px] gap-[16px] py-[16px] border-b last:border-none' title='creator'></a>
               </div>
             </div>
             
@@ -128,17 +128,17 @@ export default function Home() {
               {/* <!-- 容器 --> */}
               <div className="items-container flex flex-row flex-wrap self-center  h-fit gap-x-[12px] gap-y-[16px] p-0 mt-[28px]">
                 {/* <!-- 各item --> */}
-                <a className='flex flex-center px-[16px] py-[4px] text-[#444FAE] text-base font-[700] min-w-[64px] h-[36px] rounded-full border-2 border-[#444FAE]' href='javascript:void(0);'>日本</a>
-                <a className='flex flex-center px-[16px] py-[4px] text-[#444FAE] text-base font-[700] min-w-[64px] h-[36px] rounded-full border-2 border-[#444FAE]' href='javascript:void(0);'>京都</a>
-                <a className='flex flex-center px-[16px] py-[4px] text-[#444FAE] text-base font-[700] min-w-[64px] h-[36px] rounded-full border-2 border-[#444FAE]' href='javascript:void(0);'>夏威夷</a>
-                <a className='flex flex-center px-[16px] py-[4px] text-[#444FAE] text-base font-[700] min-w-[64px] h-[36px] rounded-full border-2 border-[#444FAE]' href='javascript:void(0);'>泰國</a>
-                <a className='flex flex-center px-[16px] py-[4px] text-[#444FAE] text-base font-[700] min-w-[64px] h-[36px] rounded-full border-2 border-[#444FAE]' href='javascript:void(0);'>長灘島</a>
-                <a className='flex flex-center px-[16px] py-[4px] text-[#444FAE] text-base font-[700] min-w-[64px] h-[36px] rounded-full border-2 border-[#444FAE]' href='javascript:void(0);'>拉斯維加斯</a>
-                <a className='flex flex-center px-[16px] py-[4px] text-[#444FAE] text-base font-[700] min-w-[64px] h-[36px] rounded-full border-2 border-[#444FAE]' href='javascript:void(0);'>冰島</a>
-                <a className='flex flex-center px-[16px] py-[4px] text-[#444FAE] text-base font-[700] min-w-[64px] h-[36px] rounded-full border-2 border-[#444FAE]' href='javascript:void(0);'>北海道</a>
-                <a className='flex flex-center px-[16px] py-[4px] text-[#444FAE] text-base font-[700] min-w-[64px] h-[36px] rounded-full border-2 border-[#444FAE]' href='javascript:void(0);'>台南</a>
-                <a className='flex flex-center px-[16px] py-[4px] text-[#444FAE] text-base font-[700] min-w-[64px] h-[36px] rounded-full border-2 border-[#444FAE]' href='javascript:void(0);'>布拉格</a>
-                <a className='flex flex-center px-[16px] py-[4px] text-[#444FAE] text-base font-[700] min-w-[64px] h-[36px] rounded-full border-2 border-[#444FAE]' href='javascript:void(0);'>比利時</a>
+                <a className='flex flex-center px-[16px] py-[4px] text-[#444FAE] text-base font-[700] min-w-[64px] h-[36px] rounded-full border-2 border-[#444FAE]' href='#'>日本</a>
+                <a className='flex flex-center px-[16px] py-[4px] text-[#444FAE] text-base font-[700] min-w-[64px] h-[36px] rounded-full border-2 border-[#444FAE]' href='#'>京都</a>
+                <a className='flex flex-center px-[16px] py-[4px] text-[#444FAE] text-base font-[700] min-w-[64px] h-[36px] rounded-full border-2 border-[#444FAE]' href='#'>夏威夷</a>
+                <a className='flex flex-center px-[16px] py-[4px] text-[#444FAE] text-base font-[700] min-w-[64px] h-[36px] rounded-full border-2 border-[#444FAE]' href='#'>泰國</a>
+                <a className='flex flex-center px-[16px] py-[4px] text-[#444FAE] text-base font-[700] min-w-[64px] h-[36px] rounded-full border-2 border-[#444FAE]' href='#'>長灘島</a>
+                <a className='flex flex-center px-[16px] py-[4px] text-[#444FAE] text-base font-[700] min-w-[64px] h-[36px] rounded-full border-2 border-[#444FAE]' href='#'>拉斯維加斯</a>
+                <a className='flex flex-center px-[16px] py-[4px] text-[#444FAE] text-base font-[700] min-w-[64px] h-[36px] rounded-full border-2 border-[#444FAE]' href='#'>冰島</a>
+                <a className='flex flex-center px-[16px] py-[4px] text-[#444FAE] text-base font-[700] min-w-[64px] h-[36px] rounded-full border-2 border-[#444FAE]' href='#'>北海道</a>
+                <a className='flex flex-center px-[16px] py-[4px] text-[#444FAE] text-base font-[700] min-w-[64px] h-[36px] rounded-full border-2 border-[#444FAE]' href='#'>台南</a>
+                <a className='flex flex-center px-[16px] py-[4px] text-[#444FAE] text-base font-[700] min-w-[64px] h-[36px] rounded-full border-2 border-[#444FAE]' href='#'>布拉格</a>
+                <a className='flex flex-center px-[16px] py-[4px] text-[#444FAE] text-base font-[700] min-w-[64px] h-[36px] rounded-full border-2 border-[#444FAE]' href='#'>比利時</a>
               </div>
             </div>
           </aside>

@@ -24,6 +24,7 @@ const config: Config = {
         xxl: {  min: '1920px' },
       },
       backgroundImage: {
+        'banner': "url(\'~@/images/banner.webp\')",
         'logo-lg': "url(\'~@/images/logo-lg.svg\')",
         'logo-md': "url(\'~@/images/logo-md.svg\')",
         'logo-sm': "url(\'~@/images/logo-sm.svg\')",

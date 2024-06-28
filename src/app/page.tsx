@@ -3,6 +3,8 @@ import { Banner } from "@/components/ui/Banner";
 import { PopularArticles } from "@/components/ui/PopularArticles";
 import { RecommendedArticles } from "@/components/ui/RecommendedArticles";
 import { ArticlesCardItem } from "@/components/ui/ArticlesCardItem";
+import { CreatorList, CreatorListItem } from "@/components/ui/CreatorList";
+import { Attractions, AttractionsItem } from "@/components/ui/Attractions";
 
 export default function Home() {
   return (

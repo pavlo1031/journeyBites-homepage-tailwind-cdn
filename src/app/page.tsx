@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { Banner } from "@/components/ui/Banner";
-import { Article, CardItem } from "@/components/ui/Article";
+import { PopularArticles } from "@/components/ui/PopularArticles";
+import { RecommendedArticles } from "@/components/ui/RecommendedArticles";
+import { ArticlesCardItem } from "@/components/ui/ArticlesCardItem";
 
 export default function Home() {
   return (
@@ -14,23 +16,18 @@ export default function Home() {
         <div id='content-wrapper' className='relative items-center md:left-[2%] lg:left-[2.5%] xl:left-[2%] flex flex-col md:items-center lg:flex-row lg:justify-center lg:items-start gap-x-[24px] gap-y-[36px] w-full sm:w-[83%] md:w-[85%] lg:w-[88%]'>
           {/* <!-- left --> */}
           <div className='left flex flex-col grow w-full sm:max-w-[570px] md:max-w-[unset] md-1:max-w-[535px] md-2:max-w-[unset] lg:w-[unset] lg-1:max-w-[535px] lg-2:max-w-[856px] h-full gap-y-[36px]'>
-            {/* <!-- 熱門文章 --> */}
-            <Article id='popular-articles' title='熱門文章' className='bg-[#EEF8FA]'>
-                <CardItem />
-                <CardItem />
-                <CardItem />
-                <CardItem />
-            </Article>
-
-            <div id='recommended-articles' className='flex flex-col w-full h-[350px] bg-[#EBEFFA]'>
-              {/* <!-- (標題, 按鈕, ...) --> */}
-              <div className='flex flex-row justify-between w-full h-fit sm:h-[88px]'>
-                <div className='ml-[12px] sm:ml-0 flex flex-center w-[163px] h-[52px] sm:w-[200px] sm:h-[64px] gap-x-[4px] text-white text-[24px] leading-[32px] rounded-b-[7px] sm:rounded-tl-[7px] sm:border-r-[7px] sm:border-b-[7px] sm:border-white bg-[#444FAE]'>
-                  <i className="size-[24px] bg-icon-thumb-up"></i>
-                  <h3>推薦文章</h3>
-                </div>
-              </div>
-            </div>
+            <PopularArticles>
+                <ArticlesCardItem />
+                <ArticlesCardItem />
+                <ArticlesCardItem />
+                <ArticlesCardItem />
+            </PopularArticles>
+            <RecommendedArticles>
+                <ArticlesCardItem />
+                <ArticlesCardItem />
+                <ArticlesCardItem />
+                <ArticlesCardItem />
+            </RecommendedArticles>
           </div>
 
           {/* <!-- right --> */}

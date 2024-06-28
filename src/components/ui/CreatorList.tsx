@@ -1,6 +1,10 @@
 'use client'
 import Link from 'next/link';
-import { useState } from 'react';
+import UiPropsType from '@/types/UiPropsType';
+
+interface CreatorListProps extends UiPropsType {
+    children: CreatorListItem[]
+}
 
 function CreatorList(props) {
     const { children } = props;
@@ -19,7 +23,11 @@ function CreatorList(props) {
     </div>);
 }
 
-function CreatorListItem(props) {
+interface CreatorListItemProps extends UiPropsType {
+    children: string
+}
+
+function CreatorListItem(props : CreatorListItemProps) {
     const { children } = props;
     const { id, className, style } = props;
     return (<a className={`creatorlist-item flex flex-row w-full gap-[16px] py-[16px] border-b last:border-none ${(className)? className:''}`} style={{...style}}>

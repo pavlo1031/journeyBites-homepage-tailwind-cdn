@@ -1,8 +1,17 @@
 'use client'
 import Link from 'next/link';
-import { useState } from 'react';
+import { ArticlesCardItem } from './ArticlesCardItem';
+import UiPropsType from '@/types/UiPropsType';
 
-function PopularArticles(props) {
+interface PopularArticlesProps extends UiPropsType {
+    children: ArticlesCardItem[],
+    title?: string,
+    description?: string,
+    author?: string,
+    date?: string
+}
+
+function PopularArticles(props : PopularArticlesProps) {
     const { children } = props;
     const { id, className, style } = props;
     // const { title, description, author, date } = props;

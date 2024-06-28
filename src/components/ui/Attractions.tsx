@@ -1,7 +1,12 @@
 'use client'
 import Link from 'next/link';
+import UiPropsType from '@/types/UiPropsType';
 
-function Attractions(props) {
+interface AttractionsProps extends UiPropsType {
+    children: AttractionsItem[]
+}
+
+function Attractions(props : AttractionsProps) {
     const { children } = props;
     const { id, className, style } = props;
     return (<div className='flex flex-col w-full h-fit p-[36px] rounded-[7px] bg-white border border-2 border-[#E2E8F0]'>
@@ -13,7 +18,12 @@ function Attractions(props) {
     </div>);
 }
 
-function AttractionsItem(props) {
+
+interface AttractionsItemProps extends UiPropsType {
+    children?: string
+}
+
+function AttractionsItem(props : AttractionsItemProps) {
     const { children } = props;
     const { id, className, style } = props;
     return (<Link className='flex flex-center px-[16px] py-[4px] text-[#444FAE] text-base font-[700] min-w-[64px] h-[36px] rounded-full border-2 border-[#444FAE]' href='#'>

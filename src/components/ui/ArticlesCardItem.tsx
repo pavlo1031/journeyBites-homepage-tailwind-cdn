@@ -1,7 +1,12 @@
 'use client'
 import Link from 'next/link';
+import UiPropsType from '@/types/UiPropsType';
 
-export function ArticlesCardItem(props) {
+interface ArticlesCardItemProps extends UiPropsType {
+    locked?: boolean
+}
+
+export function ArticlesCardItem(props : ArticlesCardItemProps) {
     const { id, className, style } = props;
     const { locked:isLocked } = props;
     return (

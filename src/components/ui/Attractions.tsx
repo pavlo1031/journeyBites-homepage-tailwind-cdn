@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link';
-import UiPropsType from '@/types/UiPropsType';
+import { UiPropsType } from '@/types/UiPropsType';
 
 interface AttractionsProps extends UiPropsType {
     children?: AttractionsItem[]

@@ -4,7 +4,7 @@ import { ArticlesCardItem } from './ArticlesCardItem';
 import { UiPropsType } from '@/types/UiPropsType';
 
 interface PopularArticlesProps extends UiPropsType {
-    children: ArticlesCardItem[],
+    children?: ArticlesCardItem[],
     title?: string,
     description?: string,
     author?: string,

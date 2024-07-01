@@ -4,7 +4,7 @@ import { ArticlesCardItem } from './ArticlesCardItem';
 import { UiPropsType } from '@/types/UiPropsType';
 
 interface RecommendedArticlesProp extends UiPropsType {
-    children?: ArticlesCardItem[]
+    children?: any
 }
 
 function RecommendedArticles(props: RecommendedArticlesProp) {
@@ -18,7 +18,7 @@ function RecommendedArticles(props: RecommendedArticlesProp) {
             </div>
         </div>
         <div className="items-container flex flex-col items-center md-1:flex-col md-1:items-center md-2:flex-row lg-1:flex-col lg-1:items-center lg-2:flex-row flex-wrap justify-center w-full h-fit p-[28px_12px_28px] md:px-[36px] gap-x-[16px] gap-y-[8px] sm:gap-y-[40px]">
-            {children.map((cardItem) => cardItem)}
+            {children}
         </div>            
     </div>);
 }

@@ -3,10 +3,10 @@ import Link from 'next/link';
 import UiPropsType from '@/types/UiPropsType';
 
 interface CreatorListProps extends UiPropsType {
-    children: CreatorListItem[]
+    children?: CreatorListItem[]
 }
 
-function CreatorList(props) {
+function CreatorList(props: CreatorListProps) {
     const { children } = props;
     const { id, className, style } = props;
     // const { title, description, author, date } = props;
@@ -24,7 +24,7 @@ function CreatorList(props) {
 }
 
 interface CreatorListItemProps extends UiPropsType {
-    children: string
+    children?: string
 }
 
 function CreatorListItem(props : CreatorListItemProps) {

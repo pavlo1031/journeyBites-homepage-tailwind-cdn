@@ -3,7 +3,7 @@ import Link from 'next/link';
 import UiPropsType from '@/types/UiPropsType';
 
 interface AttractionsProps extends UiPropsType {
-    children: AttractionsItem[]
+    children?: AttractionsItem[]
 }
 
 function Attractions(props : AttractionsProps) {

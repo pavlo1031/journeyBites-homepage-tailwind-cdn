@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link';
 import { ArticlesCardItem } from './ArticlesCardItem';
-import UiPropsType from '@/types/UiPropsType';
+import { UiPropsType } from '@/types/UiPropsType';
 
 interface PopularArticlesProps extends UiPropsType {
     children: ArticlesCardItem[],

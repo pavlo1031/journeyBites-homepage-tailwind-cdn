@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { UiPropsType } from '@/types/UiPropsType';
 
 interface CreatorListProps extends UiPropsType {
-    children?: CreatorListItem[]
+    children?: any
 }
 
 function CreatorList(props: CreatorListProps) {

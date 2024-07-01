@@ -1,5 +1,11 @@
 import Link from 'next/link';
-function Header(props) {
+import { UiPropsType } from '@/types/UiPropsType';
+
+interface HeaderProps extends UiPropsType {
+    
+}
+
+function Header(props: HeaderProps) {
     const { className, style } = props;
     return (<header className={`fixed shadow-md z-10 top-0 flex flex-row flex-center w-full h-[84px] py-[20px] bg-white ${(className)? className:''}`} style={{...style}}>
         <div className='flex flex-row justify-between w-[calc(100%-32px)] h-[44px] sm:w-[83%] lg:w-[90%] xxl:max-w-[1296px]'>

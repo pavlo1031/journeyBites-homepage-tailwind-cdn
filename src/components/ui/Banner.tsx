@@ -1,5 +1,10 @@
+import { UiPropsType } from '@/types/UiPropsType';
 
-function Banner(props) {
+interface BannerProps extends UiPropsType {
+    
+}
+
+function Banner(props: BannerProps) {
     const { id, className, style } = props;
     return (<div className={`relative flex flex-row justify-center w-full h-[800px] px-0 md:pl-[6.25%] ${(className)? className:''}`} style={{...style}}>
         <div className='bg-banner bg-cover w-full h-full rounded-bl-none md:rounded-bl-[100px]'></div>

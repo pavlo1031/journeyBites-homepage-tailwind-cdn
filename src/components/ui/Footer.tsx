@@ -1,5 +1,11 @@
 import Link from 'next/link';
-function Footer(props) {
+import { UiPropsType } from '@/types/UiPropsType';
+
+interface FooterProps extends UiPropsType {
+    
+}
+
+function Footer(props: FooterProps) {
     const { className, style } = props;
     return (<footer className={`flex flex-col flex-center py-[48px] min-w-[375px] w-full h-[375px] xs:h-[262px] bg-white ${(className)? className:''}`} style={{...style}}>
         <div className='bg-logo-lg bg-cover w-[300px] h-[38px] 2xs:w-[200px] 2xs:h-[26px]'></div>

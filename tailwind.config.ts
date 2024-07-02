@@ -25,6 +25,7 @@ const config: Config = {
       },
       backgroundImage: {
         'banner': "url(\'~@/images/banner.webp\')",
+        'banner-mobile': "url(\'~@/images/banner-mobile.png\')",
         'logo-lg': "url(\'~@/images/logo-lg.svg\')",
         'logo-md': "url(\'~@/images/logo-md.svg\')",
         'logo-sm': "url(\'~@/images/logo-sm.svg\')",

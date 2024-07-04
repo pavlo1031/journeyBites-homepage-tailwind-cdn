@@ -33,8 +33,8 @@ function CreatorListItem(props : CreatorListItemProps) {
     return (<a className={`creatorlist-item flex flex-row w-full gap-[16px] py-[16px] border-b last:border-none ${(className)? className:''}`} style={{...style}}>
         <img src='creator-image.png' className='object-cover object-left-center w-[40px] h-[40px] rounded-full' alt="creator image" />
         <div className='flex flex-col gap-y-[4px]'>
-            <h4 className='text-[20px] font-[700] leading-[28px]'>瑪雅·弗朗西斯</h4>
-            <p className='w-full text-base font-[400] leading-[28px]'>瑪雅是一位對冒險充滿熱情的旅行者。她喜歡挑戰自己,探索世...</p>
+            <h4 className='text-[16px] leading-[28px] sm:text-[20px] font-[700]'>瑪雅·弗朗西斯</h4>
+            <p className='w-full text-base font-[400] text-[14px] leading-[20px] sm:text-[16px] sm:leading-[28px]'>瑪雅是一位對冒險充滿熱情的旅行者。她喜歡挑戰自己,探索世...</p>
         </div>
     </a>);
 }

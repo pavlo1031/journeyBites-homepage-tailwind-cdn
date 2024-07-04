@@ -26,7 +26,7 @@ interface AttractionsItemProps extends UiPropsType {
 function AttractionsItem(props : AttractionsItemProps) {
     const { children } = props;
     const { id, className, style } = props;
-    return (<Link className='flex flex-center px-[16px] py-[4px] text-[#444FAE] text-base font-[700] min-w-[64px] h-[36px] rounded-full border-2 border-[#444FAE]' href='#'>
+    return (<Link className='flex flex-center px-[16px] py-[4px] text-[#444FAE] text-[16px] leading-[28px] font-[700] min-w-[64px] h-[36px] rounded-full border-2 border-[#444FAE]' href='#'>
         {children}
     </Link>);
 }

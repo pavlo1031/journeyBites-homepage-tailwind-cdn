@@ -10,9 +10,9 @@ function Attractions(props : AttractionsProps) {
     const { children } = props;
     const { id, className, style } = props;
     return (<div className={`flex flex-col w-full h-fit p-[36px] rounded-[7px] bg-white border border-2 border-[#E2E8F0] ${(className)? className:''}`} style={{...style}}>
-        <h3 className='text-[30px] leading-[36px] font-[500]'>熱門景點</h3>
+        <h3 className='text-[24px] leading-[32px] sm:text-[30px] sm:leading-[36px] font-[500] w-[100px] h-[32px] sm:w-[125px] sm:h-[36px]'>熱門景點</h3>
         <div className='bg-curveline bg-auto bg-repeat-x bg-left-top w-[56px] h-[5px] mt-[12px]'></div>
-        <div className="items-container flex flex-row flex-wrap self-center  h-fit gap-x-[12px] gap-y-[16px] p-0 mt-[28px]">
+        <div className="items-container flex flex-row flex-wrap self-center h-fit gap-x-[12px] gap-y-[16px] p-0 mt-[28px]">
             {children}
         </div>
     </div>);

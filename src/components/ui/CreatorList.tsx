@@ -12,10 +12,10 @@ function CreatorList(props: CreatorListProps) {
     // const { title, description, author, date } = props;
     return (<div id='creator-list' className={`relative flex flex-col w-full h-fit p-[36px] rounded-[7px] bg-white border-2 border-[#E2E8F0] ${(className)? className:''}`} style={{...style}}>
         <div className="flex flex-row flex-wrap w-full h-[88px] justify-between">
-        <h3 className='text-[24px] leading-[32px] font-[500] sm:text-[30px] sm:leading-[36px] w-[125px] h-[32px] sm:w-[156px] sm:h-[36px]'>創作者列表</h3>
-        <Link href='#' className='w-[96px] h-[44px] sm:w-[104px] sm:h-[52px] text-[#444FAE] text-[16px] leading-[28px] font-[700] rounded-[8px] border border-[2px] border-[#444FAE] p-[8px_16px] sm:p-[12px_20px]'>
-            查看更多
-        </Link>
+            <h3 className='text-[24px] leading-[32px] font-[500] sm:text-[30px] sm:leading-[36px] w-[125px] h-[32px] sm:w-[156px] sm:h-[36px]'>創作者列表</h3>
+            <Link href='#' className='w-[96px] h-[44px] sm:w-[104px] sm:h-[52px] text-[#444FAE] text-[16px] leading-[28px] font-[700] rounded-[8px] border border-[2px] border-[#444FAE] p-[8px_16px] sm:p-[12px_20px]'>
+                查看更多
+            </Link>
         </div>
         <div className='items-container w-full h-full'>
             {children}

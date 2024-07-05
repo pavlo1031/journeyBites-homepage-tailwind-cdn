@@ -1,5 +1,5 @@
 export interface UiPropsType {
-    id?: String,
-    className?: String,
+    id?: string,
+    className?: string,
     style?: object 
 }

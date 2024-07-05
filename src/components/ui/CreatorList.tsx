@@ -10,7 +10,6 @@ interface CreatorListProps extends UiPropsType {
 function CreatorList(props: CreatorListProps) {
     const { children = [] } = props;
     const { id, className, style } = props;
-    // const { title, description, author, date } = props;
     return (<div id='creator-list' className={`relative flex flex-col w-full h-fit p-[36px] rounded-[7px] bg-white border-2 border-[#E2E8F0] ${(className)? className:''}`} style={{...style}}>
         <div className="flex flex-row flex-wrap w-full h-[88px] justify-between">
             <h3 className='text-[24px] leading-[32px] font-[500] sm:text-[30px] sm:leading-[36px] w-[125px] h-[32px] sm:w-[156px] sm:h-[36px]'>創作者列表</h3>
@@ -29,7 +28,7 @@ interface CreatorListItemProps extends UiPropsType {
 }
 
 const CreatorListItem: React.FC<CreatorListItemProps> = (props : CreatorListItemProps) => {
-    const { children } = props;
+    const { children = '' } = props;
     const { id, className, style } = props;
     return (<a className={`creatorlist-item flex flex-row w-full gap-[16px] py-[16px] border-b last:border-none ${(className)? className:''}`} style={{...style}}>
         <img src='creator-image.png' className='object-cover object-left-center w-[40px] h-[40px] rounded-full' alt="creator image" />

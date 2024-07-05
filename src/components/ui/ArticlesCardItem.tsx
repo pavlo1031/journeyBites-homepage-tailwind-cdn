@@ -1,12 +1,13 @@
 'use client'
 import Link from 'next/link';
+import React from 'react';
 import { UiPropsType } from '@/types/UiPropsType';
 
-interface ArticlesCardItemProps extends UiPropsType {
-    locked?: boolean
+export interface ArticlesCardItemProps extends UiPropsType {
+    locked?: boolean,
 }
 
-export function ArticlesCardItem(props : ArticlesCardItemProps) {
+export const ArticlesCardItem: React.FC<ArticlesCardItemProps> = (props) => {
     const { id, className, style } = props;
     const { locked:isLocked } = props;
     return (

@@ -3,11 +3,11 @@ import Link from 'next/link';
 import { UiPropsType } from '@/types/UiPropsType';
 
 interface AttractionsProps extends UiPropsType {
-    children?: any
+    children?: typeof AttractionsItem[]
 }
 
 function Attractions(props : AttractionsProps) {
-    const { children } = props;
+    const { children = [] } = props;
     const { id, className, style } = props;
     return (<div className={`flex flex-col w-full h-fit p-[36px] rounded-[7px] bg-white border border-2 border-[#E2E8F0] ${(className)? className:''}`} style={{...style}}>
         <h3 className='text-[24px] leading-[32px] sm:text-[30px] sm:leading-[36px] font-[500] w-[100px] h-[32px] sm:w-[125px] sm:h-[36px]'>熱門景點</h3>
@@ -20,10 +20,10 @@ function Attractions(props : AttractionsProps) {
 
 
 interface AttractionsItemProps extends UiPropsType {
-    children?: string
+    children?: string,
 }
 
-function AttractionsItem(props : AttractionsItemProps) {
+const AttractionsItem: React.FC<AttractionsItemProps> = (props : AttractionsItemProps) => {
     const { children } = props;
     const { id, className, style } = props;
     return (<Link className='flex flex-center px-[16px] py-[4px] text-[#444FAE] text-[16px] leading-[28px] font-[700] min-w-[64px] h-[36px] rounded-full border-2 border-[#444FAE]' href='#'>

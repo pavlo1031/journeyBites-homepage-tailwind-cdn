@@ -1,14 +1,15 @@
 'use client'
 import Link from 'next/link';
+import React from 'react';
 import { ArticlesCardItem } from './ArticlesCardItem';
 import { UiPropsType } from '@/types/UiPropsType';
 
 interface RecommendedArticlesProp extends UiPropsType {
-    children?: any
+    children?: typeof ArticlesCardItem[],
 }
 
-function RecommendedArticles(props: RecommendedArticlesProp) {
-    const { children } = props;
+const RecommendedArticles: React.FC<RecommendedArticlesProp> = (props: RecommendedArticlesProp) => {
+    const { children = [] } = props;
     const { id, className, style } = props;
     return (<div id='recommended-articles' className={`flex flex-col w-full h-fit bg-[#EBEFFA] ${(className)? className:''}`} style={{...style}}>
         <div className='flex flex-row justify-between w-full h-fit sm:h-[88px]'>

@@ -1,13 +1,14 @@
 'use client'
 import Link from 'next/link';
+import React from 'react';
 import { UiPropsType } from '@/types/UiPropsType';
 
 interface CreatorListProps extends UiPropsType {
-    children?: any
+    children?: typeof CreatorListItem[]
 }
 
 function CreatorList(props: CreatorListProps) {
-    const { children } = props;
+    const { children = [] } = props;
     const { id, className, style } = props;
     // const { title, description, author, date } = props;
     return (<div id='creator-list' className={`relative flex flex-col w-full h-fit p-[36px] rounded-[7px] bg-white border-2 border-[#E2E8F0] ${(className)? className:''}`} style={{...style}}>
@@ -24,10 +25,10 @@ function CreatorList(props: CreatorListProps) {
 }
 
 interface CreatorListItemProps extends UiPropsType {
-    children?: string
+    children?: string,
 }
 
-function CreatorListItem(props : CreatorListItemProps) {
+const CreatorListItem: React.FC<CreatorListItemProps> = (props : CreatorListItemProps) => {
     const { children } = props;
     const { id, className, style } = props;
     return (<a className={`creatorlist-item flex flex-row w-full gap-[16px] py-[16px] border-b last:border-none ${(className)? className:''}`} style={{...style}}>

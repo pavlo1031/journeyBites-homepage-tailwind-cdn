@@ -1,18 +1,19 @@
 'use client'
 import Link from 'next/link';
+import React from 'react';
 import { ArticlesCardItem } from './ArticlesCardItem';
 import { UiPropsType } from '@/types/UiPropsType';
 
 interface PopularArticlesProps extends UiPropsType {
-    children?: any
+    children?: typeof ArticlesCardItem[],
     title?: string,
     description?: string,
     author?: string,
-    date?: string
+    date?: string,
 }
 
-function PopularArticles(props : PopularArticlesProps) {
-    const { children } = props;
+const PopularArticles: React.FC<PopularArticlesProps> = (props : PopularArticlesProps) => {
+    const { children = [] } = props;
     const { id, className, style } = props;
     // const { title, description, author, date } = props;
     return (<div id='popular-articles' className={`flex flex-col w-full h-fit bg-[#EEF8FA] ${(className)? className:''}`} style={{...style}}>

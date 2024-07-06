@@ -17,11 +17,11 @@ function CreatorList(props: CreatorListProps) {
                 查看更多
             </Link>
         </div>
-        <div className='items-container w-full h-full'>
          { children.map((element, index) =>
             // Workaround: avoid build failure
             <CreatorListItem key={index} />
          )}
+        <div className='container w-full h-full'>
         </div>            
     </div>);
 }

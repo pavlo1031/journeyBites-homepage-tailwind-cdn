@@ -21,7 +21,6 @@ function Attractions(props : AttractionsProps) {
     </div>);
 }
 
-
 interface AttractionsItemProps extends UiPropsType {
     children?: string,
 }

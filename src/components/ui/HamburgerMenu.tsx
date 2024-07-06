@@ -28,16 +28,16 @@ function HamburgerMenu(props: HamburgerMenuProps) {
         </div>
         <div className='p-[8px] gap-y-[4px]'>
             <div className='h-[28px] font-[700] text-[#444FAE]'>探索</div>
-            <li className='h-[44px] active:bg-[#444FAE] active:text-white active:rounded-[8px] p-[8px]'><Link href='#' className='w-full block'>熱門文章</Link></li>
-            <li className='h-[44px] active:bg-[#444FAE] active:text-white active:rounded-[8px] p-[8px]'><Link href='#' className='w-full block'>最新文章</Link></li>
-            <li className='h-[44px] active:bg-[#444FAE] active:text-white active:rounded-[8px] p-[8px]'><Link href='#' className='w-full block'>所有分類</Link></li>
-            <li className='h-[44px] active:bg-[#444FAE] active:text-white active:rounded-[8px] p-[8px]'><Link href='#' className='w-full block'>台灣旅遊地圖</Link></li>
-            <li className='h-[44px] active:bg-[#444FAE] active:text-white active:rounded-[8px] p-[8px]'><Link href='#' className='w-full block'>步道旅行</Link></li>
-            <li className='h-[44px] active:bg-[#444FAE] active:text-white active:rounded-[8px] p-[8px]'><Link href='#' className='w-full block'>健行日記</Link></li>
-            <li className='h-[44px] active:bg-[#444FAE] active:text-white active:rounded-[8px] p-[8px]'><Link href='#' className='w-full block'>創作者列表</Link></li>
-            <li className='h-[44px] active:bg-[#444FAE] active:text-white active:rounded-[8px] p-[8px]'><Link href='#' className='w-full block'>旅遊食記</Link></li>
-            <li className='h-[44px] active:bg-[#444FAE] active:text-white active:rounded-[8px] p-[8px]'><Link href='#' className='w-full block'>台灣百岳</Link></li>
             <ul className='container w-full h-fit font-[400]'>
+                <li className='h-[44px] active:bg-[#444FAE] active:text-white active:rounded-[8px] p-[8px]'><Link href='#' className='w-full block'>熱門文章</Link></li>
+                <li className='h-[44px] active:bg-[#444FAE] active:text-white active:rounded-[8px] p-[8px]'><Link href='#' className='w-full block'>最新文章</Link></li>
+                <li className='h-[44px] active:bg-[#444FAE] active:text-white active:rounded-[8px] p-[8px]'><Link href='#' className='w-full block'>所有分類</Link></li>
+                <li className='h-[44px] active:bg-[#444FAE] active:text-white active:rounded-[8px] p-[8px]'><Link href='#' className='w-full block'>台灣旅遊地圖</Link></li>
+                <li className='h-[44px] active:bg-[#444FAE] active:text-white active:rounded-[8px] p-[8px]'><Link href='#' className='w-full block'>步道旅行</Link></li>
+                <li className='h-[44px] active:bg-[#444FAE] active:text-white active:rounded-[8px] p-[8px]'><Link href='#' className='w-full block'>健行日記</Link></li>
+                <li className='h-[44px] active:bg-[#444FAE] active:text-white active:rounded-[8px] p-[8px]'><Link href='#' className='w-full block'>創作者列表</Link></li>
+                <li className='h-[44px] active:bg-[#444FAE] active:text-white active:rounded-[8px] p-[8px]'><Link href='#' className='w-full block'>旅遊食記</Link></li>
+                <li className='h-[44px] active:bg-[#444FAE] active:text-white active:rounded-[8px] p-[8px]'><Link href='#' className='w-full block'>台灣百岳</Link></li>
             </ul>
         </div>
         </div>

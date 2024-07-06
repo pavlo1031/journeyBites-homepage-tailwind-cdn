@@ -30,7 +30,7 @@ const PopularArticles: React.FC<PopularArticlesProps> = (props : PopularArticles
             // Workaround: avoid build failure
             <ArticlesCardItem key={index} />
          )}
-        </div>        
+        </div>
     </div>);
 }
 

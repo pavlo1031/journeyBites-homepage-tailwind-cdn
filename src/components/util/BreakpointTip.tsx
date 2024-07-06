@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { UiPropsType } from '@/types/UiPropsType';
+import { booleanValue } from '@/util/util'
 
 interface BreakpointTipProps extends UiPropsType {
     showsResolution?: boolean,
@@ -15,7 +16,7 @@ interface BreakpointTipProps extends UiPropsType {
 const BreakpointTip: React.FC<BreakpointTipProps> = (props: BreakpointTipProps) => {
     const { id, className, style, ...otherProps } = props;
     const { showsResolution } = otherProps;
-    const { debugMode } = otherProps;
+    const { debugMode = booleanValue(otherProps.debugMode) } = otherProps;
 
     // position, offsets
     const { top = 5, left = 10, bottom, right } = otherProps;

@@ -17,38 +17,12 @@ export default function Home() {
         {/* <!-- wrapper --> */}
         <div id='content-wrapper' className='relative items-center md:left-[2%] lg:left-[2.5%] xl:left-[2%] flex flex-col md:items-center lg:flex-row lg:justify-center lg:items-start gap-x-[24px] gap-y-[36px] w-full sm:w-[83%] md:w-[85%] lg:w-[88%]'>
           <div id='left' className='flex flex-col gap-y-[36px] grow w-full sm:max-w-[570px] md:max-w-[unset] md-1:max-w-[535px] md-2:max-w-[unset] lg:w-[unset] lg-1:max-w-[535px] lg-2:max-w-[856px] h-full'>
-            <PopularArticles>
-                <ArticlesCardItem />
-                <ArticlesCardItem />
-                <ArticlesCardItem />
-                <ArticlesCardItem />
-            </PopularArticles>
-            <RecommendedArticles>
-                <ArticlesCardItem />
-                <ArticlesCardItem />
-                <ArticlesCardItem />
-                <ArticlesCardItem />
-            </RecommendedArticles>
+            <PopularArticles />
+            <RecommendedArticles />
           </div>
           <aside id='right' className='flex flex-col gap-y-[36px] px-[12px] sm:px-[unset] w-full sm:max-w-[570px] md:max-w-[unset] md-1:max-w-[535px] md-2:max-w-[unset] lg:w-[350px]'>
-            <CreatorList>
-                <CreatorListItem />
-                <CreatorListItem />
-                <CreatorListItem />
-            </CreatorList>
-            <Attractions>
-                <AttractionsItem>日本</AttractionsItem>
-                <AttractionsItem>京都</AttractionsItem>
-                <AttractionsItem>夏威夷</AttractionsItem>
-                <AttractionsItem>泰國</AttractionsItem>
-                <AttractionsItem>長灘島</AttractionsItem>
-                <AttractionsItem>拉斯維加斯</AttractionsItem>
-                <AttractionsItem>冰島</AttractionsItem>
-                <AttractionsItem>北海道</AttractionsItem>
-                <AttractionsItem>台南</AttractionsItem>
-                <AttractionsItem>布拉格</AttractionsItem>
-                <AttractionsItem>比利時</AttractionsItem>
-            </Attractions>
+            <CreatorList />
+            <Attractions />
           </aside>
         </div>
       </div>

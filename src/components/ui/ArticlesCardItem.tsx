@@ -7,7 +7,7 @@ export interface ArticlesCardItemProps extends UiPropsType {
     locked?: boolean,
 }
 
-export const ArticlesCardItem: React.FC<ArticlesCardItemProps> = (props: ArticlesCardItemProps): React.ReactNode => {
+export const ArticlesCardItem: React.FC<ArticlesCardItemProps> = (props: ArticlesCardItemProps) => {
     const { id, className, style } = props;
     const { locked:isLocked } = props;
     return (

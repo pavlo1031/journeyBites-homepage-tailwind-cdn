@@ -18,7 +18,10 @@ function CreatorList(props: CreatorListProps) {
             </Link>
         </div>
         <div className='items-container w-full h-full'>
-            {children}
+         { children.map((element, index) =>
+            // Workaround: avoid build failure
+            <CreatorListItem key={index} />
+         )}
         </div>            
     </div>);
 }

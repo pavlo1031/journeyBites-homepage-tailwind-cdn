@@ -13,7 +13,10 @@ function Attractions(props : AttractionsProps) {
         <h3 className='text-[24px] leading-[32px] sm:text-[30px] sm:leading-[36px] font-[500] w-[100px] h-[32px] sm:w-[125px] sm:h-[36px]'>熱門景點</h3>
         <div className='bg-curveline bg-auto bg-repeat-x bg-left-top w-[56px] h-[5px] mt-[12px]'/>
         <div className="items-container flex flex-row flex-wrap self-start h-fit gap-x-[12px] gap-y-[16px] p-0 mt-[28px]">
-            {children}
+         { children.map((element, index) =>
+            // Workaround: avoid build failure
+            <AttractionsItem key={index} />
+         )}
         </div>
     </div>);
 }

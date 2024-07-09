@@ -16,7 +16,7 @@ const config: Config = {
         sm: {  min: '501px' },
         md: {  min: '768px'},
         'md-1': {  min: '768px', max: '871px'},
-        'md-2': {  min: '872px', max: '1023px'},
+        'md-2': {  min: '872px'},
         lg: {  min: '1024px' },
         'lg-1': { min: '1024px', max: '1266px'},
         'lg-2': { min: '1267px' },

@@ -10,7 +10,7 @@ function Header(props: HeaderProps) {
     return (<header className={`fixed shadow-md z-10 top-0 flex flex-row justify-between w-full h-[84px] py-[20px] bg-white ${(className)? className:''}`} style={{...style}}>
         <div className='flex flex-row justify-between items-center w-full'>
         <div className='flex flex-row justify-between items-center w-fit ml-[16px] sm:ml-[30px] md:ml-[16.25%]'>
-            <div className='bg-logo-sm bg-cover bg-no-repeat w-[250px] h-[30px] sm:w-[280px] sm:h-[35px] ml-[16px]'/>
+            <img src='logo-sm.svg' className='object-cover w-[160px] h-[20px] lg:w-[199px] lg:h-[26px] ml-[16px]' alt='jouney bites' />
             <div className='ml-[13%] text-[25px] font-[700] text-nowrap leading-7 hidden lg:block'>探索</div>
             <i className='bg-icon-search size-[24px] sm:ml-[15px] ml-[9%] shrink-0 hidden sm:block' />
         </div>

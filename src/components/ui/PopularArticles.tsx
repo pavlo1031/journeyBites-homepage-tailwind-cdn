@@ -9,10 +9,6 @@ import { data, PopularArticleData } from '@/data/popular-articles'
 
 interface PopularArticlesProps extends UiPropsType {
     children?: typeof ArticlesCardItem[],
-    title?: string,
-    description?: string,
-    author?: string,
-    date?: string,
 }
 
 const PopularArticles: React.FC<PopularArticlesProps> = (props : PopularArticlesProps) => {

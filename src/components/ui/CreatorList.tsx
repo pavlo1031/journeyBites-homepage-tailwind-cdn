@@ -39,7 +39,7 @@ const CreatorListItem: React.FC<CreatorListItemProps> = (props : CreatorListItem
     const { id, className, style } = props;
     const { data } = props;
     return (<a className={`creatorlist-item flex flex-row w-full gap-[16px] py-[16px] border-b last:border-none ${(className)? className:''}`} style={{...style}}>
-        <img src={data.imageURL} className='object-cover object-left-center w-[40px] h-[40px] rounded-full' alt="creator image" />
+        <img src={data.imageURL} className='object-cover aspect-square object-left-center w-[40px] h-[40px] rounded-full' alt="creator image" />
         <div className='flex flex-col gap-y-[4px]'>
             <h4 className='text-[16px] leading-[28px] sm:text-[20px] font-[700]'>{data.name}</h4>
             <p className='w-full text-base font-[400] text-[14px] leading-[20px] sm:text-[16px] sm:leading-[28px]'>{data.description}</p>

@@ -16,7 +16,7 @@ function Attractions(props : AttractionsProps) {
             // Workaround: avoid build failure
             <AttractionsItem key={index} />
          )}
-        <div className="container flex flex-row flex-wrap self-start h-fit gap-x-[12px] gap-y-[16px] p-0 mt-[28px]">
+        <div className="item-container flex flex-row flex-wrap self-start h-fit gap-x-[12px] gap-y-[16px] p-0 mt-[28px]">
         </div>
     </div>);
 }

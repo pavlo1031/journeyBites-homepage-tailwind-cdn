@@ -2,6 +2,10 @@
 import Link from 'next/link';
 import React from 'react';
 import { UiPropsType } from '@/types/UiPropsType';
+import { CreatorData } from '@/model/CreatorData';
+
+// 示例樣本資料
+import { data } from '@/data/creators';
 
 interface CreatorListProps extends UiPropsType {
     children?: typeof CreatorListItem[]
@@ -18,9 +22,8 @@ function CreatorList(props: CreatorListProps) {
             </Link>
         </div>
         <div className='item-container w-full h-full'>
-         { children.map((element, index) =>
-            // Workaround: avoid build failure
-            <CreatorListItem key={index} />
+         { data.map((item: CreatorData) => 
+            <CreatorListItem key={item.id} data={item} />
          )}
         </div>            
     </div>);
@@ -28,16 +31,18 @@ function CreatorList(props: CreatorListProps) {
 
 interface CreatorListItemProps extends UiPropsType {
     children?: string,
+    data: CreatorData,
 }
 
 const CreatorListItem: React.FC<CreatorListItemProps> = (props : CreatorListItemProps) => {
     const { children = '' } = props;
     const { id, className, style } = props;
+    const { data } = props;
     return (<a className={`creatorlist-item flex flex-row w-full gap-[16px] py-[16px] border-b last:border-none ${(className)? className:''}`} style={{...style}}>
-        <img src='creator-image.png' className='object-cover object-left-center w-[40px] h-[40px] rounded-full' alt="creator image" />
+        <img src={data.imageURL} className='object-cover object-left-center w-[40px] h-[40px] rounded-full' alt="creator image" />
         <div className='flex flex-col gap-y-[4px]'>
-            <h4 className='text-[16px] leading-[28px] sm:text-[20px] font-[700]'>瑪雅·弗朗西斯</h4>
-            <p className='w-full text-base font-[400] text-[14px] leading-[20px] sm:text-[16px] sm:leading-[28px]'>瑪雅是一位對冒險充滿熱情的旅行者。她喜歡挑戰自己,探索世...</p>
+            <h4 className='text-[16px] leading-[28px] sm:text-[20px] font-[700]'>{data.name}</h4>
+            <p className='w-full text-base font-[400] text-[14px] leading-[20px] sm:text-[16px] sm:leading-[28px]'>{data.description}</p>
         </div>
     </a>);
 }

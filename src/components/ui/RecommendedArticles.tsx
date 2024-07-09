@@ -4,6 +4,9 @@ import React from 'react';
 import { ArticlesCardItem } from './ArticlesCardItem';
 import { UiPropsType } from '@/types/UiPropsType';
 
+// 示例樣本資料
+import { data, RecommendedArticleData } from '@/data/recommended-articles'
+
 interface RecommendedArticlesProp extends UiPropsType {
     children?: typeof ArticlesCardItem[],
 }
@@ -19,9 +22,8 @@ const RecommendedArticles: React.FC<RecommendedArticlesProp> = (props: Recommend
             </div>
         </div>
         <div className="item-container flex flex-col items-center md-1:flex-col md-1:items-center md-2:flex-row lg-1:flex-col lg-1:items-center lg-2:flex-row flex-wrap justify-center w-full h-fit p-[28px_12px_28px] md:px-[36px] gap-x-[16px] gap-y-[8px] sm:gap-y-[40px]">
-         { children.map((element, index) =>
-            // Workaround: avoid build failure
-            <ArticlesCardItem key={index} />
+         { data.map((article: RecommendedArticleData) => 
+            <ArticlesCardItem key={article.id} data={article}/>
          )}
         </div>
     </div>);

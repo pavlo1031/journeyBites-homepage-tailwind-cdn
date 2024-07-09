@@ -14,6 +14,8 @@ const config: Config = {
       screens: {
         xs: {  min: '0px' },
         sm: {  min: '501px' },
+        'sm-1:': {  min: '501px', max: '670px' },
+        'sm-2': {  min: '671px' },
         md: {  min: '768px'},
         'md-1': {  min: '768px', max: '871px'},
         'md-2': {  min: '872px'},

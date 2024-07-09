@@ -8,6 +8,7 @@ interface HeaderProps extends UiPropsType {
 function Header(props: HeaderProps) {
     const { className, style } = props;
     return (<header className={`fixed shadow-md z-10 top-0 flex flex-row justify-between w-full h-[84px] py-[20px] bg-white ${(className)? className:''}`} style={{...style}}>
+        <div className='flex flex-row justify-between items-center w-full'>
         <div className='flex flex-row justify-between items-center w-fit ml-[16px] sm:ml-[30px] md:ml-[16.25%]'>
             <div className='bg-logo-sm bg-cover bg-no-repeat w-[250px] h-[30px] sm:w-[280px] sm:h-[35px] ml-[16px]'/>
             <div className='ml-[13%] text-[25px] font-[700] text-nowrap leading-7 hidden lg:block'>探索</div>
@@ -18,6 +19,7 @@ function Header(props: HeaderProps) {
             <Link href='#' className='bg-icon-bell size-[24px]' title='通知' />
             <Link href='#' className='bg-icon-user size-[24px] 2xs:ml-[12px]' title='user' />
             <Link id='btn-openMenu' href='#' className='bg-icon-menu size-[24px] 2xs:ml-[12px] 2xs:block sm:hidden' title='menu' />
+        </div>
         </div>
     </header>);
   }

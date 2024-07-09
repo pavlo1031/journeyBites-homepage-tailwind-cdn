@@ -11,7 +11,7 @@ export const ArticlesCardItem: React.FC<ArticlesCardItemProps> = (props: Article
     const { id, className, style } = props;
     const { locked:isLocked } = props;
     return (
-    <div className={`item relative flex flex-col gap-y-[8px] p-[20px] w-full min-h-[208px] sm:max-w-[384px] md-2:w-[calc((100%-16px)/2)] lg-1:w-[384] lg-2:w-[calc((100%-16px)/2)] bg-white rounded-[8px] shadow-[0_2px_4px_0px_#AEAEAE40] ${(className)? className:''}`}  style={{...style}}>
+    <div className={`item relative flex flex-col gap-y-[8px] p-[20px] w-full min-h-[208px] sm:max-w-[384px] md-2:w-[calc((100%-16px)/2)] lg-1:w-[384px] lg-2:w-[calc((100%-16px)/2)] bg-white rounded-[8px] shadow-[0_2px_4px_0px_#AEAEAE40] ${(className)? className:''}`}  style={{...style}}>
         { (isLocked) &&
             <i className='lock bg-icon-lock bg-[#59ABBD] rounded-full bg-center bg-no-repeat size-[36px] absolute top-[-20px] right-[8px] border'/>
         }

@@ -20,8 +20,8 @@ export const data: RecommendedArticleData[] = [
     },
     {
       id: '002',
-      title: '穿越悉尼,探索澳洲之魅',
-      description: '悉尼,澳洲的經典之都,融合了自然之美與現代化的魅力。在悉尼歌劇院的壯觀...',
+      title: '穿越雪梨,探索澳洲之魅',
+      description: '雪梨,澳洲的經典之都,融合了自然之美與現代化的魅力。在雪梨歌劇院的壯觀...',
       imageURL: 'https://s3-alpha-sig.figma.com/img/777a/aedc/bca522be36f4d19aa57485fda7849cbc?Expires=1721001600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=pcFA-~d1v7WOs341OFF~t0uPfTUBvCD7MuM-QHjjL~DMThvR6cDFevnpnMOACD9AzHPrmihD3QDU4bxcqKKpsaVdoTREl-zmRrmPWW-sC2tQ9k4Mhf8dh3kCXQk0nldL5Nr5Sk~WJnSV5h0e~d-Gsgy5F~EJexbeUA3Yw8loUFXV9adjfYYObF2Sbbjk1EfgA0LAYl0xIBEVe5AjvEhUcgdfmLOn0jUgaiOQzu2IMOorZqkJmsuoZtUPeXjX3-Uv3JpgL6rpd6dV~~utOQI414ZJPZcbxYwtAoYcO86u792~z8tNAWJiAhkGTG1w~0jxYB~aaVDfL75XHlS0t2aKLQ__',
       authorId: 'alexandra_smith',
       authorName: 'Alexandra Smith',

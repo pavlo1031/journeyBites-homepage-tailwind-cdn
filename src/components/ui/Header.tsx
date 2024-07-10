@@ -22,6 +22,6 @@ function Header(props: HeaderProps) {
         </div>
         </div>
     </header>);
-  }
-  
-  export { Header };
+}
+
+export { Header };

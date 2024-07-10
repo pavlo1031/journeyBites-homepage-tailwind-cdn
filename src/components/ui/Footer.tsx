@@ -19,6 +19,6 @@ function Footer(props: FooterProps) {
             &copy;2024 Journey Bites
         </div>
     </footer>);
-  }
+}
   
-  export { Footer };
+export { Footer };

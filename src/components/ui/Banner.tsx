@@ -18,6 +18,6 @@ function Banner(props: BannerProps) {
             <button className='align-center w-[96px] h-[44px] w-[104px] h-[52px] px-[20px] py-[12px] text-[16px] text-white text-nowrap mt-[28px] sm:mt-[36px] rounded-md bg-[#444FAE]'>開始創作</button>
         </div>
     </div>);
-  }
+}
   
-  export { Banner };
+export { Banner };

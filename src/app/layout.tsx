@@ -12,6 +12,7 @@ export const metadata: Metadata = {
 import { Header } from "@/components/ui/Header";
 import { Footer } from "@/components/ui/Footer";
 import { HamburgerMenu } from "@/components/ui/HamburgerMenu";
+import { MenuStateProvider } from "@/context/MenuStateContext";
 
 export default function RootLayout({
   children,
@@ -21,10 +22,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header />
-        {children}
-        <HamburgerMenu id='hamburgerMenu'/>
-        <Footer />
+        <MenuStateProvider>
+          <Header />
+          {children}
+          <HamburgerMenu id='hamburgerMenu'/>
+          <Footer />
+        </MenuStateProvider>
       </body>
     </html>
   );

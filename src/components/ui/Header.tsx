@@ -1,12 +1,22 @@
+'use client'
 import Link from 'next/link';
 import { UiPropsType } from '@/types/UiPropsType';
+import React, { useEffect, useContext } from 'react';
+import { MenuContextType, MenuStateContext } from '@/context/MenuStateContext'
 
 interface HeaderProps extends UiPropsType {
     
 }
 
 function Header(props: HeaderProps) {
+    const menuToggleStateContext = useContext<MenuContextType>(MenuStateContext);
+    const { visible, toggleVisibility } = menuToggleStateContext;
     const { className, style } = props;
+    
+    const handleOnClick = () => {
+        menuToggleStateContext.toggleVisibility();
+    };
+
     return (<header className={`fixed shadow-md z-10 top-0 flex flex-row justify-between w-full h-[84px] py-[20px] bg-white ${(className)? className:''}`} style={{...style}}>
         <div className='flex flex-row justify-between items-center w-full h-fit'>
             <div className='flex flex-row justify-between items-center w-fit ml-[16px] sm:ml-[30px] md:ml-[16.25%]'>
@@ -18,10 +28,10 @@ function Header(props: HeaderProps) {
                 <button className='text-base text-white text-nowrap rounded-md w-[99px] h-[44px] bg-[#444FAE] hidden sm-2:block'>開始創作</button>
                 <Link href='#' className='bg-icon-bell size-[24px]' title='通知' />
                 <Link href='#' className='bg-icon-user size-[24px] 2xs:ml-[12px]' title='user' />
-                <Link id='btn-openMenu' href='#' className='bg-icon-menu size-[24px] 2xs:ml-[12px] 2xs:block sm:hidden' title='menu' />
+                <Link id='btn-openMenu' href='#' className='bg-icon-menu size-[24px] 2xs:ml-[12px] 2xs:block sm:hidden' title='menu' onClick={handleOnClick}/>
             </div>
         </div>
-    </header>);
+      </header>);
 }
 
 export { Header };

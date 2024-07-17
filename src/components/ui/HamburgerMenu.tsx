@@ -1,7 +1,8 @@
 'use client'
-import Link from 'next/link';
-import { useState } from 'react';
-import { UiPropsType } from '@/types/UiPropsType';
+import Link from 'next/link'
+import { useContext } from 'react'
+import { MenuStateContext } from '@/context/MenuStateContext'
+import { UiPropsType } from '@/types/UiPropsType'
 
 interface HamburgerMenuProps extends UiPropsType {
     
@@ -11,7 +12,7 @@ function HamburgerMenu(props: HamburgerMenuProps) {
 
     const { id, className, style } = props;
     
-    const [ isVisible, setVisible ] = useState<Boolean>(false);
+    const { visible:isVisible, setVisible } = useContext(MenuStateContext);
 
     const handleOnClose = () => {
         setVisible(false);
@@ -48,7 +49,7 @@ function HamburgerMenu(props: HamburgerMenuProps) {
         <div id='menu-buttons-login' className='flex flex-row gap-x-[24px] w-full h-fit'>
             <button className='w-full h-[44px] rounded-[6px] font-[700] text-[#EBEFFA] bg-[#444FAE] border border-2 border-[#444FAE]'>開始</button>
         </div>
-    </div>);
+  </div>);
 }
 
 export { HamburgerMenu };

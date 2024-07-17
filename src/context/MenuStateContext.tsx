@@ -1,30 +1,35 @@
 'use client'
 import { createContext, useState } from "react";
+import { MenuToggleState } from "@/components/ui/HamburgerMenu";
 
 export type MenuContextType = {
-  visible: boolean,
-  setVisible: (visible: boolean) => any,
-  toggleVisibility: (visible?: boolean) => any
+  menuToggleState: MenuToggleState,
+  setMenuToggleState: (menuToggleState: MenuToggleState) => any,
+  toggleMenuToggleState: () => any
 }
 
 const initialContext = {
-  visible: false,
-  setVisible: (visible: boolean) => {},
-  toggleVisibility: (visible?: boolean) => {}
+  menuToggleState: MenuToggleState.OFF,
+  setMenuToggleState: (menuToggleState: MenuToggleState) => {
+
+  },
+  toggleMenuToggleState: () => {
+
+  }
 }
 
 export const MenuStateContext = createContext<MenuContextType>(initialContext);
 
 export const MenuStateProvider = ({children}: {children: any}) => {
-  const [visible, setVisible] = useState<boolean>(false);  
-  const toggleVisibility = (visibleParm?: boolean) => {
-    if (visibleParm !== undefined && visibleParm !== null)
-      setVisible(visibleParm);
+  const [menuToggleState, setMenuToggleState] = useState<MenuToggleState>(MenuToggleState.OFF);  
+  const toggleMenuToggleState = () => {
+    if (MenuToggleState.ON === menuToggleState)
+      setMenuToggleState(MenuToggleState.OFF);
     else 
-      setVisible(!visible);
+      setMenuToggleState(MenuToggleState.ON);
   };
 
-  return <MenuStateContext.Provider value={{visible, setVisible, toggleVisibility}}>
+  return <MenuStateContext.Provider value={{menuToggleState, setMenuToggleState, toggleMenuToggleState}}>
     {children}
   </MenuStateContext.Provider>;
 }

@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { useContext } from 'react'
-import { MenuStateContext } from '@/context/MenuStateContext'
+import { MenuContextType, MenuStateContext } from '@/context/MenuStateContext'
 import { UiPropsType } from '@/types/UiPropsType'
 
 interface HamburgerMenuProps extends UiPropsType {

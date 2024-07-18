@@ -19,11 +19,13 @@ export const ArticlesCardItem: React.FC<ArticlesCardItemProps> = (props: Article
             <i className='lock bg-icon-lock bg-[#59ABBD] rounded-full bg-center bg-no-repeat size-[36px] absolute top-[-20px] right-[8px] border'/>
         }
         <Link href='#' className='flex flex-col gap-y-[8px] sm:flex-row sm:justify-between sm:gap-x-[12px]' title='article'>
-            <div className='order-2 sm:order-none sm:w-[68%]'>
+            <div className={`order-2 sm:order-none sm:grow-1 ${(data?.imageURL)?'sm:w-[68%]':''}`}>
                 <h4 className='sm:truncate text-[20px] font-[700]'>{data?.title}</h4>
                 <p className='text-[16px] font-[400]'>{data?.description}</p>
             </div>
-            <img src={data?.imageURL} className='xs:order-1 w-full h-[140px] object-cover sm:w-[28%] sm:h-[100px] sm:aspect-square shrink-0 rounded-[8px]' alt='article thumbnail image'/>
+            {(data?.imageURL) &&
+              <img src={data?.imageURL} className='xs:order-1 w-full h-[140px] object-cover sm:w-[28%] sm:h-[100px] sm:aspect-square shrink-0 rounded-[8px]' alt='article thumbnail image'/>
+            }            
         </Link>
         <Link href='#' className='flex flex-row items-center w-fit gap-x-[8px]' title='author'>
             <img  src={data?.authorPicURL} className='object-cover rounded-full size-[28px]' alt='article author'></img>

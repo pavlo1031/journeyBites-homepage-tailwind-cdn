@@ -31,7 +31,7 @@ function Header(props: HeaderProps) {
                 <Link id='btn-openMenu' href='#' className='bg-icon-menu size-[24px] 2xs:ml-[12px] 2xs:block sm:hidden' title='menu' onClick={handleOnClick}/>
             </div>
         </div>
-      </header>);
+    </header>);
 }
 
 export { Header };

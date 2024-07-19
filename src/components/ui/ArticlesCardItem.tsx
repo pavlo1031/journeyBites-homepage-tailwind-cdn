@@ -25,7 +25,7 @@ export const ArticlesCardItem: React.FC<ArticlesCardItemProps> = (props: Article
             </div>
             {(data?.imageURL) &&
               <img src={data?.imageURL} className='xs:order-1 w-full h-[140px] object-cover sm:w-[28%] sm:h-[100px] sm:aspect-square shrink-0 rounded-[8px]' alt='article thumbnail image'/>
-            }            
+            }
         </Link>
         <Link href='#' className='flex flex-row items-center w-fit gap-x-[8px]' title='author'>
             <img  src={data?.authorPicURL} className='object-cover rounded-full size-[28px]' alt='article author'></img>

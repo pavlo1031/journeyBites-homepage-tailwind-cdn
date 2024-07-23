@@ -38,6 +38,29 @@ a {
   text-decoration: none;
 }
 
+.button {
+  padding: 8px 16px;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
+  text-wrap: nowrap
+}
+
+.button.button-filled {
+  border-color: #444FAE;
+  background-color: #444FAE;
+  color: #fff;
+}
+
+.button.button-hollow {
+  border-color: #444FAE;
+  background-color: var(--background-rgb);
+  color: #444FAE;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

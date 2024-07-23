@@ -24,11 +24,17 @@ function Header(props: HeaderProps) {
                 <div className='ml-[13%] text-[20px] font-[700] text-nowrap leading-[28px] hidden lg:block'>探索</div>
                 <i className='bg-icon-search size-[24px] sm:ml-[32px] shrink-0 hidden sm:block' />
             </div>
-            <div className='flex flex-row items-center h-[44px] gap-x-[32px] 2xs:gap-x-[24px] mr-[12px] sm:mr-[30px] md-2:mr-[16.25%]'>
-                <button className='text-base text-white text-nowrap rounded-md w-[99px] h-[44px] bg-[#444FAE] hidden sm-2:block'>開始創作</button>
-                <Link href='#' className='bg-icon-bell size-[24px]' title='通知' />
-                <Link href='#' className='bg-icon-user size-[24px] 2xs:ml-[12px]' title='user' />
-                <Link id='btn-openMenu' href='#' className='bg-icon-menu size-[24px] 2xs:ml-[12px] 2xs:block sm:hidden' title='menu' onClick={handleOnClick}/>
+            <div className='flex flex-row items-center gap-x-[32px] 2xs:gap-x-[24px] mr-[12px] sm:mr-[30px] md-2:mr-[16.25%]'>
+                <div className='guest-buttons flex flex-row gap-x-[32px] w-fit'>
+                    <button className='button button-hollow'>登入</button>
+                    <button className='button button-filled'>註冊</button>
+                </div>
+                <div className='login-buttons flex flex-row gap-x-[32px] items-center'>
+                    <button className='button button-filled hidden sm-2:block'>開始創作</button>
+                    <Link href='#' className='bg-icon-bell size-[24px]' title='通知' />
+                    <Link href='#' className='bg-icon-user size-[24px] 2xs:ml-[12px]' title='user' />
+                    <Link id='btn-openMenu' href='#' className='bg-icon-menu size-[24px] 2xs:ml-[12px] 2xs:block sm:hidden' title='menu' onClick={handleOnClick}/>
+                </div>
             </div>
         </div>
     </header>);

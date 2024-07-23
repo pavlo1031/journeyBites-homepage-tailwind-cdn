@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { ArticlesCardItem } from './ArticlesCardItem';
 import { UiPropsType } from '@/types/UiPropsType';
 
@@ -20,7 +20,7 @@ const PopularArticles: React.FC<PopularArticlesProps> = (props : PopularArticles
                 <i className="size-[24px] bg-icon-party-popper"></i>
                 <h3 className='text-[20px] sm:text-[24px] w-[84px] h-[28px] sm:w-[100px] sm:h-[32px]'>熱門文章</h3>
             </div>
-            <Link href='#' className='w-fit w-[104px] h-[52px] mt-[8px] mr-[12px] sm:mt-[36px] sm:mr-[36px]  p-[12px_20px] text-[#444FAE] text-base font-[700] rounded-[8px] border border-[2px] border-[#444FAE]' title='see more'>
+            <Link href='#' className='button button-hollow button-size-2 w-[104px] mt-[8px] mr-[12px] sm:mt-[36px] sm:mr-[36px]' title='see more'>
                 查看更多
             </Link>
         </div>

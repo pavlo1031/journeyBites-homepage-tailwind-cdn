@@ -15,7 +15,7 @@ function Banner(props: BannerProps) {
             <div className='leading-[36px] text-[25px] md:text-[30px] font-[500] text-white tracking-[5%] mt-[12px] sm:mt-[20px]'>
               和我們一起發現、分享和創造
             </div>
-            <button className='align-center w-[96px] h-[44px] w-[104px] h-[52px] px-[20px] py-[12px] text-[16px] text-white text-nowrap mt-[28px] sm:mt-[36px] rounded-md bg-[#444FAE]'>開始創作</button>
+            <button className='align-center button button-filled button-size-2 rounded-[6px] mt-[28px] sm:mt-[36px]'>開始創作</button>
         </div>
     </div>);
 }

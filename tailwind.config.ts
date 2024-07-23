@@ -12,7 +12,7 @@ const config: Config = {
         3: '3px',
       },
       screens: {
-        xs: {  min: '0px' },
+        xs: {  max: '500px' },
         sm: {  min: '501px' },
         'sm-1:': {  min: '501px', max: '670px' },
         'sm-2': {  min: '671px' },

@@ -38,43 +38,45 @@ a {
   text-decoration: none;
 }
 
-.button {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  min-height: 44px;
-  padding: 8px 16px;
-  border-width: 2px;
-  border-style: solid;
-  border-radius: 6px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 28px;
-  text-wrap: nowrap
-}
+@layer components {
+  .button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 44px;
+    padding: 8px 16px;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 28px;
+    text-wrap: nowrap
+  }
 
-.button.button-size-1 {
-  padding: 8px 16px;
-  border-radius: 6px;
-  height: 44px;
-}
-.button.button-size-2 {
-  padding: 12px 20px;
-  border-radius: 8px;
-  height: 52px;
-}
+  .button.button-size-1 {
+    padding: 8px 16px;
+    border-radius: 6px;
+    height: 44px;
+  }
+  .button.button-size-2 {
+    padding: 12px 20px;
+    border-radius: 8px;
+    height: 52px;
+  }
 
-.button.button-filled {
-  border-color: #444FAE;
-  background-color: #444FAE;
-  color: #fff;
-}
+  .button.button-filled {
+    border-color: #444FAE;
+    background-color: #444FAE;
+    color: #fff;
+  }
 
-.button.button-hollow {
-  border-color: #444FAE;
-  background-color: var(--background-rgb);
-  color: #444FAE;
+  .button.button-hollow {
+    border-color: #444FAE;
+    background-color: var(--background-rgb);
+    color: #444FAE;
+  }
 }
 
 @layer utilities {

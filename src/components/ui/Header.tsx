@@ -11,7 +11,7 @@ interface HeaderProps extends UiPropsType {
 function Header(props: HeaderProps) {
     const menuToggleStateContext = useContext<MenuContextType>(MenuStateContext);
     const { visible, toggleVisibility } = menuToggleStateContext;
-    const { className, style } = props;
+    const { className, style, ...otherProps } = props;
     
     const handleOnClick = () => {
         menuToggleStateContext.toggleVisibility();
